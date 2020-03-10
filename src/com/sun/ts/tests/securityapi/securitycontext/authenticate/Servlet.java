@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.inject.Inject;
 import javax.security.enterprise.AuthenticationStatus;
 import javax.security.enterprise.SecurityContext;

@@ -23,9 +23,9 @@ package com.sun.ts.tests.ejb30.sec.stateful.secrunaspropagation;
 import com.sun.ts.lib.util.RemoteLoggingInitException;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
-import javax.annotation.security.RunAs;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.annotation.security.RunAs;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.ejb.TransactionAttribute;

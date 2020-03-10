@@ -28,7 +28,7 @@ import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.ServletSecurity.*;
 import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.HttpConstraint;
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 
 /*
  * This should allow the Aministrator role perms to access any of the servlet

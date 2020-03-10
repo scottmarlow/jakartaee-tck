@@ -34,7 +34,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.HttpConstraint;
 

@@ -21,7 +21,7 @@ import javax.servlet.http.*;
 import java.io.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.annotation.ServletSecurity;
-import javax.annotation.security.PermitAll;
+import jakarta.annotation.security.PermitAll;
 
 import com.sun.ts.tests.interop.csiv2.common.CSIv2FileLoggerImpl;
 

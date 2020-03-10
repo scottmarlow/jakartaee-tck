@@ -27,7 +27,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.security.enterprise.identitystore.DatabaseIdentityStoreDefinition;
 import com.sun.ts.tests.securityapi.idstore.common.PlaintextPasswordHash;
 import javax.servlet.ServletException;

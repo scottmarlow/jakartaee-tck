@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.security.enterprise.authentication.mechanism.http.AuthenticationParameters;
 import javax.security.enterprise.credential.Credential;
 import javax.security.enterprise.credential.Password;

@@ -26,7 +26,7 @@ import javax.annotation.Resource;
 import javax.ejb.TransactionAttribute;
 import javax.ejb.TransactionAttributeType;
 import javax.ejb.SessionContext;
-import javax.annotation.security.RolesAllowed;
+import jakarta.annotation.security.RolesAllowed;
 
 @Stateless(name = "SecTestEJB")
 @Remote({ SecTest.class })

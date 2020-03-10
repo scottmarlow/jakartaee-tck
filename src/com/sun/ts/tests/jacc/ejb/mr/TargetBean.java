@@ -21,10 +21,10 @@ import com.sun.ts.tests.ejb30.common.helper.Helper;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
-import javax.annotation.security.PermitAll;
-import javax.annotation.security.DenyAll;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.DenyAll;
 import javax.annotation.Resource;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;

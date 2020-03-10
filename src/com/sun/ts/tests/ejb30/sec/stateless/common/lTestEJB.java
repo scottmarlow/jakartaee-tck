@@ -23,8 +23,8 @@ package com.sun.ts.tests.ejb30.sec.stateless.common;
 import com.sun.ts.lib.util.RemoteLoggingInitException;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RolesAllowed;
 import javax.annotation.Resource;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;

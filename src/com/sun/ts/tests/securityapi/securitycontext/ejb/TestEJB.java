@@ -20,8 +20,8 @@ import java.security.Principal;
 import java.util.Set;
 
 import javax.annotation.Resource;
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.PermitAll;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.PermitAll;
 import javax.ejb.EJBContext;
 import javax.ejb.Stateless;
 import javax.inject.Inject;

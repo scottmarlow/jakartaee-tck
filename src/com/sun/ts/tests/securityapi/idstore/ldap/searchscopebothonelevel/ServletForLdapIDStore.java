@@ -22,7 +22,7 @@ import static javax.security.enterprise.identitystore.LdapIdentityStoreDefinitio
 
 import java.io.IOException;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.security.enterprise.identitystore.LdapIdentityStoreDefinition;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

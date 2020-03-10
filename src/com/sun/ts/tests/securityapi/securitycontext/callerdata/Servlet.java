@@ -19,7 +19,7 @@ package com.sun.ts.tests.securityapi.securitycontext.callerdata;
 import java.io.IOException;
 import java.util.List;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.inject.Inject;
 import javax.security.enterprise.CallerPrincipal;
 import javax.security.enterprise.SecurityContext;

@@ -26,9 +26,9 @@ import com.sun.ts.tests.ejb30.sec.stateless.common.lTest;
 import com.sun.ts.tests.ejb30.sec.stateless.common.SecTestLocal;
 import com.sun.ts.tests.ejb30.sec.stateless.common.SecTestRoleRefLocal;
 
-import javax.annotation.security.DeclareRoles;
-import javax.annotation.security.RolesAllowed;
-import javax.annotation.security.RunAs;
+import jakarta.annotation.security.DeclareRoles;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.annotation.security.RunAs;
 import javax.annotation.Resource;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;

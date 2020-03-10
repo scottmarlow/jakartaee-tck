@@ -19,7 +19,7 @@ package com.sun.ts.tests.securityapi.ham.sam.delegation;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.HttpConstraint;
 import javax.servlet.annotation.ServletSecurity;

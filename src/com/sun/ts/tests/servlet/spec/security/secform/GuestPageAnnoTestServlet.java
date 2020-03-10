@@ -28,7 +28,7 @@ import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.ServletSecurity.*;
 import javax.servlet.annotation.HttpMethodConstraint;
 import javax.servlet.annotation.HttpConstraint;
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 
 /* 
  * This servlet is the annotation based equivalent of GuestPageTestServlet.

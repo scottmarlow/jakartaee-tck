@@ -23,7 +23,7 @@ import com.sun.ts.lib.util.WebUtil;
 import com.sun.ts.tests.common.webclient.BaseUrlClient;
 import com.sun.javatest.Status;
 
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.annotation.Resource;
 
 import java.util.Properties;

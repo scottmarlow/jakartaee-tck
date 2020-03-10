@@ -21,7 +21,7 @@ import java.lang.annotation.Annotation;
 import java.util.Set;
 
 import javax.annotation.Resource;
-import javax.annotation.security.DeclareRoles;
+import jakarta.annotation.security.DeclareRoles;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Default;

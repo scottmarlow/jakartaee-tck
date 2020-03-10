@@ -58,15 +58,15 @@ public class CAJSigTest extends SigTest {
 
   private final String RESOURCES = "javax.annotation.Resources";
 
-  private final String SECURITYDECLAREROLES = "javax.annotation.security.DeclareRoles";
+  private final String SECURITYDECLAREROLES = "jakarta.annotation.security.DeclareRoles";
 
-  private final String SECURITYDENYALL = "javax.annotation.security.DenyAll";
+  private final String SECURITYDENYALL = "jakarta.annotation.security.DenyAll";
 
-  private final String SECURITYPERMITALL = "javax.annotation.security.PermitAll";
+  private final String SECURITYPERMITALL = "jakarta.annotation.security.PermitAll";
 
-  private final String SECURITYROLESALLOWED = "javax.annotation.security.RolesAllowed";
+  private final String SECURITYROLESALLOWED = "jakarta.annotation.security.RolesAllowed";
 
-  private final String SECURITYRUNAS = "javax.annotation.security.RunAs";
+  private final String SECURITYRUNAS = "jakarta.annotation.security.RunAs";
 
   private final String SQLDATASOURCEDEFINITION = "javax.annotation.sql.DataSourceDefinition";
 
