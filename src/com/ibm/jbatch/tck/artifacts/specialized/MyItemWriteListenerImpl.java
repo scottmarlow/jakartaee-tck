@@ -22,9 +22,9 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.listener.AbstractItemWriteListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.listener.AbstractItemWriteListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 @javax.inject.Named("myItemWriteListenerImpl")

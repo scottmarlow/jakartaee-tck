@@ -21,8 +21,8 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.logging.Logger;
 
-import javax.batch.api.listener.AbstractStepListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.listener.AbstractStepListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 

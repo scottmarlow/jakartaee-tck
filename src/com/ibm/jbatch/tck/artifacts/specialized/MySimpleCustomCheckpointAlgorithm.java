@@ -38,7 +38,7 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.AbstractCheckpointAlgorithm;
+import jakarta.batch.api.chunk.AbstractCheckpointAlgorithm;
 
 @javax.inject.Named("mySimpleCustomCheckpointAlgorithm")
 public class MySimpleCustomCheckpointAlgorithm extends AbstractCheckpointAlgorithm {

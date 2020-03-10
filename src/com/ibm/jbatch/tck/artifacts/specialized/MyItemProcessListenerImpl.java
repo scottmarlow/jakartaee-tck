@@ -21,9 +21,9 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.logging.Logger;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.listener.AbstractItemProcessListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.listener.AbstractItemProcessListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.chunktypes.ReadRecord;

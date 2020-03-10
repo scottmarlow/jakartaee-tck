@@ -25,8 +25,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.AbstractItemWriter;
 import javax.inject.Inject;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;

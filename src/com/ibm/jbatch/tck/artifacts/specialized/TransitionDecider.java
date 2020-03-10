@@ -19,10 +19,10 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.Decider;
-import javax.batch.runtime.StepExecution;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.Decider;
+import jakarta.batch.runtime.StepExecution;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 @javax.inject.Named("transitionDecider")

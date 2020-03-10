@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 import java.io.Serializable;
 import java.util.logging.Logger;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.AbstractItemReader;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.AbstractItemReader;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.chunktypes.CheckpointData;

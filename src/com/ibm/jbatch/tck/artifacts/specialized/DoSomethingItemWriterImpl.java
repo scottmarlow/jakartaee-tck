@@ -23,7 +23,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.api.chunk.AbstractItemWriter;
 
 import com.ibm.jbatch.tck.artifacts.chunktypes.CheckpointData;
 import com.ibm.jbatch.tck.artifacts.chunktypes.ReadRecord;

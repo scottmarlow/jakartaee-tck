@@ -21,8 +21,8 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.logging.Logger;
 
-import javax.batch.api.AbstractBatchlet;
-import javax.batch.api.BatchProperty;
+import jakarta.batch.api.AbstractBatchlet;
+import jakarta.batch.api.BatchProperty;
 import javax.inject.Inject;
 
 

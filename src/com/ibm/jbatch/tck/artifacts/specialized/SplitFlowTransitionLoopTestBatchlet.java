@@ -22,9 +22,9 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.batch.api.AbstractBatchlet;
-import javax.batch.runtime.context.JobContext;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.AbstractBatchlet;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 @javax.inject.Named("splitFlowTransitionLoopTestBatchlet")

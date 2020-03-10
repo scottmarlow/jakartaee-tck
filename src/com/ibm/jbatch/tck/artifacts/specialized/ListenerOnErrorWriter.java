@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.ItemWriter;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.ItemWriter;
 import javax.inject.Inject;
 import javax.inject.Named;
 

@@ -19,9 +19,9 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.Decider;
-import javax.batch.runtime.BatchStatus;
-import javax.batch.runtime.StepExecution;
+import jakarta.batch.api.Decider;
+import jakarta.batch.runtime.BatchStatus;
+import jakarta.batch.runtime.StepExecution;
 
 import com.ibm.jbatch.tck.artifacts.common.StatusConstants;
 

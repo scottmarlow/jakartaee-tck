@@ -21,10 +21,10 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.Map;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.listener.ChunkListener;
-import javax.batch.runtime.context.JobContext;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.listener.ChunkListener;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 

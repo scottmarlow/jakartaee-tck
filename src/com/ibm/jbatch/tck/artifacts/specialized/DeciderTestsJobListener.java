@@ -19,8 +19,8 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.listener.AbstractJobListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.listener.AbstractJobListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.common.StatusConstants;

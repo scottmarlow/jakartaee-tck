@@ -21,9 +21,9 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.Properties;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.partition.PartitionMapper;
-import javax.batch.api.partition.PartitionPlan;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.partition.PartitionMapper;
+import jakarta.batch.api.partition.PartitionPlan;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.specialized.MyPartitionPlan;

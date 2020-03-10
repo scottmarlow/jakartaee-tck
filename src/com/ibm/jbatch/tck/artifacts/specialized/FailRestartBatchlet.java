@@ -19,8 +19,8 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.Batchlet;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.Batchlet;
 import javax.inject.Inject;
 
 @javax.inject.Named("failRestartBatchlet")

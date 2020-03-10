@@ -21,7 +21,7 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.io.Serializable;
 
-import javax.batch.api.chunk.ItemReader;
+import jakarta.batch.api.chunk.ItemReader;
 
 @javax.inject.Named("artifactInstanceTestReader")
 public class ArtifactInstanceTestReader implements ItemReader {

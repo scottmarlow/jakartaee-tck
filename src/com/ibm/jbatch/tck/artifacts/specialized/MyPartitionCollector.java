@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.io.Externalizable;
 
-import javax.batch.api.partition.PartitionCollector;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.partition.PartitionCollector;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.reusable.ExternalizableString;

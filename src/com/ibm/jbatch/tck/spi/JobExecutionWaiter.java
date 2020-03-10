@@ -19,7 +19,7 @@ package com.ibm.jbatch.tck.spi;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.runtime.JobExecution;
+import jakarta.batch.runtime.JobExecution;
 
 public interface JobExecutionWaiter {
 	JobExecution awaitTermination() throws JobExecutionTimeoutException;

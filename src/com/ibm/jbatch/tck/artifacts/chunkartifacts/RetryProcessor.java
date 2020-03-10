@@ -21,9 +21,9 @@ import com.sun.ts.lib.util.TestUtil;
 
 import java.util.Properties;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.ItemProcessor;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.ItemProcessor;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 

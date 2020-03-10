@@ -19,7 +19,7 @@ package com.ibm.jbatch.tck.spi;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.operations.JobOperator;
+import jakarta.batch.operations.JobOperator;
 
 public interface JobExecutionWaiterFactory {
 	public JobExecutionWaiter createWaiter(long executionId, JobOperator jobOp, long sleepTime);

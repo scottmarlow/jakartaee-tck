@@ -170,10 +170,10 @@ public class JavaEESigTest extends SigTestEE {
     EJB_MAP.put("jta",
         new String[] { "javax.transaction" });
     EJB_MAP.put("batch",
-        new String[] { "javax.batch.api", "javax.batch.api.chunk",
-            "javax.batch.api.chunk.listener", "javax.batch.api.listener",
-            "javax.batch.api.partition", "javax.batch.operations",
-            "javax.batch.runtime", "javax.batch.runtime.context" });
+        new String[] { "jakarta.batch.api", "jakarta.batch.api.chunk",
+            "jakarta.batch.api.chunk.listener", "jakarta.batch.api.listener",
+            "jakarta.batch.api.partition", "jakarta.batch.operations",
+            "jakarta.batch.runtime", "jakarta.batch.runtime.context" });
     EJB_MAP.put("concurrency", new String[] { "javax.enterprise.concurrent" });
     EJB_MAP.put("securityapi",
         new String[] { "javax.security.enterprise",

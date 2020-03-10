@@ -19,7 +19,7 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.AbstractBatchlet;
+import jakarta.batch.api.AbstractBatchlet;
 
 @javax.inject.Named("splitTransitionToDecisionTestBatchlet")
 public class SplitTransitionToDecisionTestBatchlet extends AbstractBatchlet {

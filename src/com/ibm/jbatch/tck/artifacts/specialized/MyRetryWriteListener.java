@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.logging.Logger;
 import java.util.List;
 
-import javax.batch.api.chunk.listener.RetryWriteListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.chunk.listener.RetryWriteListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 

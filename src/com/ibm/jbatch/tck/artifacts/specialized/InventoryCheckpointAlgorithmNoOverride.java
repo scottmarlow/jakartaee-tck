@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.AbstractCheckpointAlgorithm;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.AbstractCheckpointAlgorithm;
 import javax.inject.Inject;
 
 /*

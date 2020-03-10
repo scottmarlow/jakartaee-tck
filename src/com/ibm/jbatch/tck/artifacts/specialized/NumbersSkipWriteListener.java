@@ -23,8 +23,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.listener.SkipWriteListener;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.chunk.listener.SkipWriteListener;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 

@@ -23,8 +23,8 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.ItemWriter;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.chunk.ItemWriter;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 @javax.inject.Named("nullChkPtInfoWriter")

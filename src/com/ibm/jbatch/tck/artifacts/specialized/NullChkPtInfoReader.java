@@ -22,8 +22,8 @@ import com.sun.ts.lib.util.TestUtil;
 import java.io.Serializable;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.ItemReader;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.chunk.ItemReader;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 
 @javax.inject.Named("nullChkPtInfoReader")

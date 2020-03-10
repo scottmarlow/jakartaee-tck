@@ -22,9 +22,9 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.listener.JobListener;
-import javax.batch.runtime.context.JobContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.listener.JobListener;
+import jakarta.batch.runtime.context.JobContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 

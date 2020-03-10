@@ -25,9 +25,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
-import javax.batch.api.listener.AbstractStepListener;
-import javax.batch.runtime.context.JobContext;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.listener.AbstractStepListener;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;

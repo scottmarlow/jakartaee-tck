@@ -19,7 +19,7 @@ package com.ibm.jbatch.tck.artifacts.specialized;
 import com.sun.ts.lib.harness.*;
 import com.sun.ts.lib.util.TestUtil;
 
-import javax.batch.api.partition.PartitionPlanImpl;
+import jakarta.batch.api.partition.PartitionPlanImpl;
 
 @javax.inject.Named("myPartitionPlan")
 public class MyPartitionPlan extends PartitionPlanImpl {

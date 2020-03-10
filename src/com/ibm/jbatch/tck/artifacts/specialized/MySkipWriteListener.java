@@ -22,9 +22,9 @@ import com.sun.ts.lib.util.TestUtil;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.batch.api.chunk.listener.SkipWriteListener;
-import javax.batch.runtime.context.JobContext;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.chunk.listener.SkipWriteListener;
+import jakarta.batch.runtime.context.JobContext;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 

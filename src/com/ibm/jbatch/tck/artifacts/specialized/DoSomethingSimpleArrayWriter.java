@@ -23,9 +23,9 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.batch.api.BatchProperty;
-import javax.batch.api.chunk.AbstractItemWriter;
-import javax.batch.runtime.context.StepContext;
+import jakarta.batch.api.BatchProperty;
+import jakarta.batch.api.chunk.AbstractItemWriter;
+import jakarta.batch.runtime.context.StepContext;
 import javax.inject.Inject;
 
 import com.ibm.jbatch.tck.artifacts.chunktypes.ArrayIndexCheckpointData;
