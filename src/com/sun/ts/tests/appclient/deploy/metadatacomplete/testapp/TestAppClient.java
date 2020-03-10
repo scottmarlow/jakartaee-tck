@@ -22,7 +22,7 @@ package com.sun.ts.tests.appclient.deploy.metadatacomplete.testapp;
 import java.util.Properties;
 
 import javax.annotation.Resource;
-import javax.annotation.sql.DataSourceDefinition;
+import jakarta.annotation.sql.DataSourceDefinition;
 import javax.ejb.EJB;
 import javax.jms.JMSConnectionFactoryDefinition;
 import javax.jms.JMSDestinationDefinition;

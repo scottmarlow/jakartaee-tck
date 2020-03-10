@@ -68,9 +68,9 @@ public class CAJSigTest extends SigTest {
 
   private final String SECURITYRUNAS = "jakarta.annotation.security.RunAs";
 
-  private final String SQLDATASOURCEDEFINITION = "javax.annotation.sql.DataSourceDefinition";
+  private final String SQLDATASOURCEDEFINITION = "jakarta.annotation.sql.DataSourceDefinition";
 
-  private final String SQLDATASOURCEDEFINITIONS = "javax.annotation.sql.DataSourceDefinitions";
+  private final String SQLDATASOURCEDEFINITIONS = "jakarta.annotation.sql.DataSourceDefinitions";
 
   private boolean ca_generated = false;
 

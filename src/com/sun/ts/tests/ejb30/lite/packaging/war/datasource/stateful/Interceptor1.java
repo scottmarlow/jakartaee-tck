@@ -25,7 +25,7 @@ import java.sql.Connection;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
-import javax.annotation.sql.DataSourceDefinition;
+import jakarta.annotation.sql.DataSourceDefinition;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
 import javax.sql.DataSource;
