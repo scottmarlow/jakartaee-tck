@@ -1,4 +1,7 @@
-# JakartaEE TCK Jenkins Jobs
+# JakartaEE TCK Jenkins Jobs  
+whitespace
+
+:
 The Jenkins jobs required for certifying Eclipse GlassFish nightly builds using the latest Jakarta EE TCK bundles are hosted in the Eclipse CloudBees Infrastructure and are available under
 https://jenkins.eclipse.org/jakartaee-tck/
 
