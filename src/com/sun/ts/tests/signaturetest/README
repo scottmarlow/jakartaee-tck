@@ -95,7 +95,7 @@ Recording API Signatures
 
   Batch mode using a signature map file
   -------------------------------------
-  - cd $TS_HOME/src/com/sun/ts/tests/signaturetest/signature-respository
+  - cd $TS_HOME/src/com/sun/ts/tests/signaturetest/signature-repository
 
         ant -find record-build.xml \
               -Dsig.source=<location.of.APIs> \
