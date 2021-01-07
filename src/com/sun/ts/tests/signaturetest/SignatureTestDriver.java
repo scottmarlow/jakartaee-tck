@@ -59,7 +59,7 @@ public abstract class SignatureTestDriver {
     } else if (isJavaSEVersion("9")) {
       thePkgListFile = "sig-test-pkg-list_se9.txt";
     } else if (isJavaSEVersion("11")) {
-      thePkgListFile = "sig-test-pkg-list_se11.txt";
+      thePkgListFile = "sig-test-pkg-list_se8.txt";
     } else {
       // we didn't properly identify the java se version being used so
       // we will try to use the sig-test-pkg-list.txt file.
@@ -112,7 +112,7 @@ public abstract class SignatureTestDriver {
     } else if (isJavaSEVersion("9")) {
       theMapFile = "sig-test_se9.map";
     } else if (isJavaSEVersion("11")) {
-      theMapFile = "sig-test_se11.map";
+      theMapFile = "sig-test_se8.map";
     } else {
       // we didn't properly identify the java se version being used so
       // we will try to use the sig-test.map file.
