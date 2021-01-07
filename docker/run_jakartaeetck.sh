@@ -37,6 +37,13 @@ if [ -z "${CTS_HOME}" ]; then
 fi
 export TS_HOME=${CTS_HOME}/jakartaeetck/
 
+if [[ "$JDK" == "JDK11" || "$JDK" == "jdk11" ]];then
+  echo "JDK=$JDK switching to use JDK11"
+  export JAVA_HOME=${JDK11_HOME}
+  export PATH=$JAVA_HOME/bin:$PATH
+  # Do we need a ts.jte.jdk11 to copy over ts.jte as is done for standalone TCKS?
+fi
+
 if [ -z "${RI_JAVA_HOME}" ]; then
   export RI_JAVA_HOME=$JAVA_HOME
 fi
