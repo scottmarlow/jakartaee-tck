@@ -102,8 +102,8 @@ public class SigTestDriver extends SignatureTestDriver {
       TestUtil
           .logTrace("Not Setting static mode flag to allow constant checking.");
     }
-    command.add("-Dexclude.plugin=com.sun.ts.tests.signaturetest.SigTestExclude");
-    
+    System.getProperties().put("exclude.plugin","com.sun.ts.tests.signaturetest.SigTestExclude");
+
     if (TestUtil.harnessDebug) {
       command.add(DEBUG_FLAG);
     }
