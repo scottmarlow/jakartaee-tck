@@ -90,7 +90,8 @@ public class Jdk9SigTestDriver extends SigTestDriver {
       TestUtil
           .logTrace("Not Setting static mode flag to allow constant checking.");
     }
-
+    command.add("-Dexclude.plugin=com.sun.ts.tests.signaturetest.SigTestExclude");
+    
     if (TestUtil.harnessDebug) {
       command.add(DEBUG_FLAG);
     }
