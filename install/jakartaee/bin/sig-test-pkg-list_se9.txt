@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2018, 2020 Oracle and/or its affiliates. All rights reserved.
+# Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
 #
 # This program and the accompanying materials are made available under the
 # terms of the Eclipse Public License v. 2.0, which is available at
@@ -23,19 +23,8 @@
 # parent package's signature is checked.
 ##
 
-java.io
-java.lang
-java.lang.Enum<{java.lang
-java.lang.annotation
-java.rmi
-java.security
-java.sql
-java.text
-java.util
-java.util.concurrent
 jakarta.activation
 jakarta.annotation
-javax.annotation.processing
 jakarta.annotation.security
 jakarta.annotation.sql
 jakarta.batch.api
@@ -102,7 +91,6 @@ jakarta.mail.event
 jakarta.mail.internet
 jakarta.mail.search
 jakarta.mail.util
-javax.naming
 jakarta.persistence
 jakarta.persistence.criteria
 jakarta.persistence.metamodel
@@ -113,8 +101,6 @@ jakarta.resource.spi
 jakarta.resource.spi.endpoint
 jakarta.resource.spi.security
 jakarta.resource.spi.work
-javax.security.auth.callback
-javax.security.auth.login
 jakarta.security.auth.message
 jakarta.security.auth.message.callback
 jakarta.security.auth.message.config
@@ -136,7 +122,6 @@ jakarta.servlet.jsp.jstl.sql
 jakarta.servlet.jsp.jstl.tlv
 jakarta.servlet.jsp.tagext
 jakarta.transaction
-javax.transaction.xa
 jakarta.validation
 jakarta.validation.Configuration<{jakarta.validation
 jakarta.validation.Configuration<{jakarta.validation.bootstrap
@@ -163,12 +148,7 @@ jakarta.xml.bind.annotation.adapters
 jakarta.xml.bind.attachment
 jakarta.xml.bind.helpers
 jakarta.xml.bind.util
-javax.xml.registry
-javax.xml.registry.infomodel
 jakarta.xml.soap
-javax.xml.transform
-javax.xml.transform.dom
-javax.xml.transform.sax
 jakarta.xml.ws
 jakarta.xml.ws.handler
 jakarta.xml.ws.handler.soap
@@ -177,5 +157,3 @@ jakarta.xml.ws.soap
 jakarta.xml.ws.spi
 jakarta.xml.ws.spi.http
 jakarta.xml.ws.wsaddressing
-org.w3c.dom
-org.xml.sax
