@@ -96,8 +96,8 @@ public class SigTestDriver extends SignatureTestDriver {
       // vals
       // (note that using "-mode bin" mode is less strict)
       command.add(SMODE_FLAG);
-      // command.add("bin");
-      command.add("src");
+      command.add("bin");
+      //command.add("src");
     } else {
       TestUtil
           .logTrace("Not Setting static mode flag to allow constant checking.");
