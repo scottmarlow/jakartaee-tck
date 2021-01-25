@@ -175,7 +175,8 @@ public class SigTestDriver extends SignatureTestDriver {
     Class sigTestClass = Class
         .forName("com.sun.tdk.signaturetest.JakartaSignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
-
+    TestUtil.logMsg(
+            "\nxxx Calling:  testing with class :" + sigTestInstance.getClass().getName());
     ByteArrayOutputStream output = new ByteArrayOutputStream();
 
     // we want to replace the PACKAGE_FLAG with PACKAGE_NO_SUBS_FLAG
@@ -186,10 +187,10 @@ public class SigTestDriver extends SignatureTestDriver {
     }
 
     // dump args for debugging aid
-    TestUtil.logTrace(
+    TestUtil.logMsg(
         "\nCalling:  com.sun.tdk.signaturetest.JakartaSignatureTest() with following args:");
     for (int ii = 0; ii < testArguments.length; ii++) {
-      TestUtil.logTrace("	  testArguments[" + ii + "] = " + testArguments[ii]);
+      TestUtil.logMsg("	  testArguments[" + ii + "] = " + testArguments[ii]);
     }
 
     @SuppressWarnings("unchecked")
@@ -231,13 +232,12 @@ public class SigTestDriver extends SignatureTestDriver {
     String testArguments [] = (String[]) command.toArray(new String[command.size()]);
 
     // do some logging to help with troubleshooting
-    // TODO:  switch to com.sun.tdk.signaturetest.JakartaSignatureTest?
-    TestUtil.logTrace("\nCalling:  com.sun.tdk.signaturetest.SignatureTest() with following args:");
+    TestUtil.logTrace("\nCalling:  com.sun.tdk.signaturetest.JakartaSignatureTest() with following args:");
     for (int ii=0; ii < testArguments.length; ii++) {
       TestUtil.logTrace("   testArguments[" +ii+ "] = " + testArguments[ii]);
     }
-    // TODO: switch to JakartaSignatureTest?
-    Class sigTestClass = Class.forName("com.sun.tdk.signaturetest.SignatureTest");
+
+    Class sigTestClass = Class.forName("com.sun.tdk.signaturetest.JakartaSignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
     ByteArrayOutputStream output = new ByteArrayOutputStream();
 
