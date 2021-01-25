@@ -118,7 +118,7 @@ public final class ApiCheckDriver extends SignatureTestDriver
   protected boolean runPackageSearch(String packageOrClassName,
       String[] testArguments) throws Exception {
     Class sigTestClass = Class
-        .forName("com.sun.tdk.signaturetest.SignatureTest");
+        .forName("com.sun.tdk.signaturetest.JakartaSignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
 
     ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -132,7 +132,7 @@ public final class ApiCheckDriver extends SignatureTestDriver
 
     // dump args for debugging aid
     TestUtil.logTrace(
-        "\nCalling:  com.sun.tdk.signaturetest.SignatureTest() with following args:");
+        "\nCalling:  com.sun.tdk.signaturetest.JakartaSignatureTest() with following args:");
     for (int ii = 0; ii < testArguments.length; ii++) {
       TestUtil.logTrace("	  testArguments[" + ii + "] = " + testArguments[ii]);
     }

@@ -134,14 +134,14 @@ public class SigTestDriver extends SignatureTestDriver {
       String[] testArguments) throws Exception {
 
     Class sigTestClass = Class
-        .forName("com.sun.tdk.signaturetest.SignatureTest");
+        .forName("com.sun.tdk.signaturetest.JakartaSignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
 
     ByteArrayOutputStream output = new ByteArrayOutputStream();
 
     // do some logging to help with troubleshooting
     TestUtil.logTrace(
-        "\nCalling:  com.sun.tdk.signaturetest.SignatureTest() with following args:");
+        "\nCalling:  com.sun.tdk.signaturetest.JakartaSignatureTest() with following args:");
     for (int ii = 0; ii < testArguments.length; ii++) {
       TestUtil.logTrace("   testArguments[" + ii + "] = " + testArguments[ii]);
     }
@@ -173,7 +173,7 @@ public class SigTestDriver extends SignatureTestDriver {
       String[] testArguments) throws Exception {
 
     Class sigTestClass = Class
-        .forName("com.sun.tdk.signaturetest.SignatureTest");
+        .forName("com.sun.tdk.signaturetest.JakartaSignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
 
     ByteArrayOutputStream output = new ByteArrayOutputStream();
@@ -187,7 +187,7 @@ public class SigTestDriver extends SignatureTestDriver {
 
     // dump args for debugging aid
     TestUtil.logTrace(
-        "\nCalling:  com.sun.tdk.signaturetest.SignatureTest() with following args:");
+        "\nCalling:  com.sun.tdk.signaturetest.JakartaSignatureTest() with following args:");
     for (int ii = 0; ii < testArguments.length; ii++) {
       TestUtil.logTrace("	  testArguments[" + ii + "] = " + testArguments[ii]);
     }
@@ -231,11 +231,12 @@ public class SigTestDriver extends SignatureTestDriver {
     String testArguments [] = (String[]) command.toArray(new String[command.size()]);
 
     // do some logging to help with troubleshooting
+    // TODO:  switch to com.sun.tdk.signaturetest.JakartaSignatureTest?
     TestUtil.logTrace("\nCalling:  com.sun.tdk.signaturetest.SignatureTest() with following args:");
     for (int ii=0; ii < testArguments.length; ii++) {
       TestUtil.logTrace("   testArguments[" +ii+ "] = " + testArguments[ii]);
     }
-
+    // TODO: switch to JakartaSignatureTest?
     Class sigTestClass = Class.forName("com.sun.tdk.signaturetest.SignatureTest");
     Object sigTestInstance = sigTestClass.newInstance();
     ByteArrayOutputStream output = new ByteArrayOutputStream();
