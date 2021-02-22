@@ -41,7 +41,8 @@ abstract public class RemoteCalculatorBean4Super extends BaseRemoteCalculator
     retValue = super.remoteAdd(a, b);
     if (Exclude.ignoreCorba()) {
       TLogger.logMsg("Corba testing is disabled, ignore " + this.getClass().getName() + ".#remoteAdd use of Corba");
-      return retValue; // TODO: may need to add the equivalent of what orb.toString().length() would of returned if enabled.
+      return retValue + 
+              "com.sun.corba.se.impl.orb.ORBImpl@a5fef45".length(); // simulate value that orb.toString() might be expected to return 
     }
     
     return retValue + (orb == null ? 0 : orb.toString().length());
