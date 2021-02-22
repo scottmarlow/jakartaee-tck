@@ -29,6 +29,8 @@ public class Exclude {
      * @return true if Corba is excluded from TCK testing.
      */
     public static boolean ignoreCorba() {
-        return Boolean.getBoolean("ExcludeCorba");
+        // Hacked for testing only (enable the following line before merging) 
+        // return Boolean.getBoolean("ExcludeCorba");
+        return true;  // DO NOT MERGE this change (delete this line before merging) 
       }
 }
