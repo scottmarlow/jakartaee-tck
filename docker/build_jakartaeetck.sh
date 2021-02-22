@@ -108,7 +108,6 @@ export tckname=jakartaee
 export TS_HOME=$JAKARTA_JARS
 
 cd $JAKARTA_JARS/src/com/sun/ts/tests/signaturetest
-script /tmp/sigtest.log
 cd /home/smarlow/work/jakarta/jakartaee-tck/src/com/sun/ts/tests/signaturetest
 for tckjarname in $JAKARTA_JARS/modules/jakarta*.jar; do
   [ -e "$tckjarname" ] || continue
@@ -116,7 +115,6 @@ for tckjarname in $JAKARTA_JARS/modules/jakarta*.jar; do
   echo "generate signature for $tckjarname"
   sigTestClasspath=${pathsep}${tckjarname}${pathsep}${JAVA_HOME}/jre/lib/rt.jar${pathsep}
   ant -find record-build.xml -Dsig.source="${sigtest_classes}${pathsep}${sigTestClasspath}" -Dmap.file=${TS_HOME}/install/jakartaee/bin/sig-test_se8.map -Ddeliverabledir="modules"   -Drecorder.type=sigtest record.sig.batch 
-
 done
 
 #TODO : security jar is required to compile SunRILoginContext.java, look for alternative way to remove this dependency
