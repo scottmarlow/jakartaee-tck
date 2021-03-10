@@ -68,10 +68,6 @@ public class SigTestRecorder extends Recorder {
     command.add("-apiVersion");
     command.add(version);
 
-    String str = "Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.";
-    command.add("-CopyRight");
-    command.add(str);
-
     return ((String[]) command.toArray(new String[command.size()]));
 
   } // END getCommandLine
