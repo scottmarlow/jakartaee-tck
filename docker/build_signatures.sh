@@ -100,8 +100,6 @@ export OPTIONS="-static "
 
 # jakarta.annotation
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.annotation -FileName jakarta.annotation.sig_2.0_se8
-# jakarta.security.auth
-java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.security.auth -FileName jakarta.authentication-api.map
 # jakarta.security.jacc
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.security.jacc -FileName jakarta.security.jacc.sig_2.0_se8
 # jakarta.batch
