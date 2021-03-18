@@ -113,7 +113,7 @@ java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestCla
 # jakarta.el
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.el -FileName jakarta.el.sig_4.0_se8
 # jakarta.enterprise
-java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.enterprise -FileName jakarta.enterprise.sig_3.0_se8
+java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -Exclude jakarta.enterprise.concurrent -package jakarta.enterprise -FileName jakarta.enterprise.sig_3.0_se8
 # jakarta.enterprise.concurrent
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.enterprise.concurrent -FileName jakarta.enterprise.concurrent.sig_2.0_se8
 # jakarta.faces
@@ -125,7 +125,7 @@ java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestCla
 # jakarta.jms
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.jms -FileName jakarta.jms.sig_3.0_se8
 # jakarta.json
-java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.json -FileName jakarta.json.sig_2.0_se8
+java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -Exclude jakarta.json.bind -package jakarta.json -FileName jakarta.json.sig_2.0_se8
 # jakarta.json.bind
 java -jar ${TS_HOME}/lib/sigtestdev.jar Setup ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.json.bind -FileName jakarta.json.bind.sig_2.0_se8
 # jakarta.mail
