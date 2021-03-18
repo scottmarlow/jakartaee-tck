@@ -90,7 +90,8 @@ $JAKARTA_JARS/jakarta.ws.rs-api.jar${pathsep}\
 $JAKARTA_JARS/jakarta.xml.bind-api.jar${pathsep}\
 $JAKARTA_JARS/webservices-api.jar${pathsep}\
 $JAKARTA_JARS/webservices-api-osgi.jar${pathsep}\
-${JAVA_HOME}/jre/lib/rt.jar"
+${JAVA_HOME}/jre/lib/rt.jar${pathsep}\
+${JAVA_HOME}/jre/lib/jce.jar"
 
 #echo "sigTestClasspath = $sigTestClasspath"
 
