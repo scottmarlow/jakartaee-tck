@@ -100,8 +100,9 @@ ${RTJAR}"
 export DEBUG=" -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=y " 
 # export OPTIONS="-static -debug -verbose "
 # export OPTIONS="-static -Mode src -debug -verbose"
-export OPTIONS="-static "
-
+export OPTIONS="-Static -CheckValue -mode src -Verbose"
+# export OPTIONS="-static "
+# export OPTIONS="-Exclude java.lang "
 export CLASSNAME=com.sun.tdk.signaturetest.Main
 #export CLASSNAME=com.sun.tdk.apicheck.Main
 export CLASSPATH=${RTJAR}:$CLASSPATH:${TS_HOME}/lib/sigtestdev.jar
@@ -109,7 +110,7 @@ export CLASSPATH=${RTJAR}:$CLASSPATH:${TS_HOME}/lib/sigtestdev.jar
 export SIGFILEPATH=$TS_HOME/src/com/sun/ts/tests/signaturetest/signature-repository
 
 # jakarta.annotation
-java $CLASSNAME Test ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0 -package jakarta.annotation -FileName ${SIGFILEPATH}/jakarta.annotation.sig_2.0_se8
+java $DEBUG $CLASSNAME Test ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0 -package jakarta.annotation -FileName ${SIGFILEPATH}/jakarta.annotation.sig_2.0_se8
 # jakarta.security.jacc
 java $CLASSNAME Test ${OPTIONS} -classpath ${sigTestClasspath} -apiVersion 1.0  -package jakarta.security.jacc -FileName ${SIGFILEPATH}/jakarta.security.jacc.sig_2.0_se8
 # jakarta.batch

@@ -99,7 +99,7 @@ ${JAVA_HOME}/jre/lib/jce.jar"
 #echo "sigTestClasspath = $sigTestClasspath"
 
 #export OPTIONS="-static -debug -verbose"
-export OPTIONS="-static "
+export OPTIONS="-Static "
 export CLASSNAME=com.sun.tdk.signaturetest.Main
 export CLASSPATH=$CLASSPATH:${TS_HOME}/lib/sigtestdev.jar
 export SIGFILEPATH=$TS_HOME/src/com/sun/ts/tests/signaturetest/signature-repository
