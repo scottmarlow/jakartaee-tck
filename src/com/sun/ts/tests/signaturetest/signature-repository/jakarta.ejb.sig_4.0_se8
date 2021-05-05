@@ -1,10 +1,13 @@
-#Signature file v4.1
-#Version 1.0
+#Signature file v4.3
+#Version 4.0_se8
+
+# Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.
+
 
 CLSS public jakarta.ejb.AccessLocalException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
@@ -12,7 +15,7 @@ CLSS public abstract interface !annotation jakarta.ejb.AccessTimeout
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[METHOD, TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.util.concurrent.TimeUnit unit()
+meth public abstract !hasdefault java.util.concurrent.TimeUnit unit() value= MILLISECONDS
 meth public abstract long value()
 
 CLSS public abstract interface !annotation jakarta.ejb.ActivationConfigProperty
@@ -36,11 +39,11 @@ CLSS public abstract interface !annotation jakarta.ejb.ApplicationException
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault boolean inherited()
-meth public abstract !hasdefault boolean rollback()
+meth public abstract !hasdefault boolean inherited() value= true
+meth public abstract !hasdefault boolean rollback() value= false
 
 CLSS public final jakarta.ejb.AsyncResult<%0 extends java.lang.Object>
-cons public init({jakarta.ejb.AsyncResult%0})
+cons public <init>({jakarta.ejb.AsyncResult%0})
 intf java.util.concurrent.Future<{jakarta.ejb.AsyncResult%0}>
 meth public boolean cancel(boolean)
 meth public boolean isCancelled()
@@ -64,7 +67,7 @@ CLSS public abstract interface !annotation jakarta.ejb.ConcurrencyManagement
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault jakarta.ejb.ConcurrencyManagementType value()
+meth public abstract !hasdefault jakarta.ejb.ConcurrencyManagementType value() value= CONTAINER
 
 CLSS public final !enum jakarta.ejb.ConcurrencyManagementType
 fld public final static jakarta.ejb.ConcurrencyManagementType BEAN
@@ -74,21 +77,21 @@ meth public static jakarta.ejb.ConcurrencyManagementType[] values()
 supr java.lang.Enum<jakarta.ejb.ConcurrencyManagementType>
 
 CLSS public jakarta.ejb.ConcurrentAccessException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.ConcurrentAccessTimeoutException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.ConcurrentAccessException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.CreateException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr java.lang.Exception
 hfds serialVersionUID
 
@@ -99,8 +102,8 @@ intf java.lang.annotation.Annotation
 meth public abstract java.lang.String[] value()
 
 CLSS public jakarta.ejb.DuplicateKeyException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.CreateException
 hfds serialVersionUID
 
@@ -108,16 +111,16 @@ CLSS public abstract interface !annotation jakarta.ejb.EJB
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE, METHOD, FIELD])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.Class beanInterface()
-meth public abstract !hasdefault java.lang.String beanName()
-meth public abstract !hasdefault java.lang.String description()
-meth public abstract !hasdefault java.lang.String lookup()
-meth public abstract !hasdefault java.lang.String mappedName()
-meth public abstract !hasdefault java.lang.String name()
+meth public abstract !hasdefault java.lang.Class beanInterface() value= class java.lang.Object
+meth public abstract !hasdefault java.lang.String beanName() value= ""
+meth public abstract !hasdefault java.lang.String description() value= ""
+meth public abstract !hasdefault java.lang.String lookup() value= ""
+meth public abstract !hasdefault java.lang.String mappedName() value= ""
+meth public abstract !hasdefault java.lang.String name() value= ""
 
 CLSS public jakarta.ejb.EJBAccessException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
@@ -134,10 +137,10 @@ meth public abstract java.util.Map<java.lang.String,java.lang.Object> getContext
 meth public abstract void setRollbackOnly()
 
 CLSS public jakarta.ejb.EJBException
-cons public init()
-cons public init(java.lang.Exception)
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.Exception)
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 meth public java.lang.Exception getCausedByException()
 supr java.lang.RuntimeException
 hfds serialVersionUID
@@ -175,15 +178,15 @@ meth public abstract java.lang.Object getPrimaryKey() throws java.rmi.RemoteExce
 meth public abstract void remove() throws jakarta.ejb.RemoveException,java.rmi.RemoteException
 
 CLSS public jakarta.ejb.EJBTransactionRequiredException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.EJBTransactionRolledbackException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
@@ -213,8 +216,8 @@ meth public abstract jakarta.ejb.EJBObject getEJBObject()
 meth public abstract java.lang.Object getPrimaryKey()
 
 CLSS public jakarta.ejb.FinderException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr java.lang.Exception
 hfds serialVersionUID
 
@@ -227,8 +230,8 @@ intf java.io.Serializable
 meth public abstract jakarta.ejb.EJBHome getEJBHome() throws java.rmi.RemoteException
 
 CLSS public jakarta.ejb.IllegalLoopbackException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.ConcurrentAccessException
 hfds serialVersionUID
 
@@ -236,13 +239,13 @@ CLSS public abstract interface !annotation jakarta.ejb.Init
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[METHOD])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.String value()
+meth public abstract !hasdefault java.lang.String value() value= ""
 
 CLSS public abstract interface !annotation jakarta.ejb.Local
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.Class[] value()
+meth public abstract !hasdefault java.lang.Class[] value() value= []
 
 CLSS public abstract interface !annotation jakarta.ejb.LocalBean
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
@@ -259,7 +262,7 @@ CLSS public abstract interface !annotation jakarta.ejb.Lock
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE, METHOD])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault jakarta.ejb.LockType value()
+meth public abstract !hasdefault jakarta.ejb.LockType value() value= WRITE
 
 CLSS public final !enum jakarta.ejb.LockType
 fld public final static jakarta.ejb.LockType READ
@@ -272,11 +275,11 @@ CLSS public abstract interface !annotation jakarta.ejb.MessageDriven
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault jakarta.ejb.ActivationConfigProperty[] activationConfig()
-meth public abstract !hasdefault java.lang.Class messageListenerInterface()
-meth public abstract !hasdefault java.lang.String description()
-meth public abstract !hasdefault java.lang.String mappedName()
-meth public abstract !hasdefault java.lang.String name()
+meth public abstract !hasdefault jakarta.ejb.ActivationConfigProperty[] activationConfig() value= []
+meth public abstract !hasdefault java.lang.Class messageListenerInterface() value= class java.lang.Object
+meth public abstract !hasdefault java.lang.String description() value= ""
+meth public abstract !hasdefault java.lang.String mappedName() value= ""
+meth public abstract !hasdefault java.lang.String name() value= ""
 
 CLSS public abstract interface jakarta.ejb.MessageDrivenBean
 intf jakarta.ejb.EnterpriseBean
@@ -287,35 +290,35 @@ CLSS public abstract interface jakarta.ejb.MessageDrivenContext
 intf jakarta.ejb.EJBContext
 
 CLSS public jakarta.ejb.NoMoreTimeoutsException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.NoSuchEJBException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.NoSuchEntityException
-cons public init()
-cons public init(java.lang.Exception)
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.Exception)
+cons public <init>(java.lang.String)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.NoSuchObjectLocalException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.ObjectNotFoundException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.FinderException
 hfds serialVersionUID
 
@@ -333,7 +336,7 @@ CLSS public abstract interface !annotation jakarta.ejb.Remote
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.Class[] value()
+meth public abstract !hasdefault java.lang.Class[] value() value= []
 
 CLSS public abstract interface !annotation jakarta.ejb.RemoteHome
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
@@ -345,11 +348,11 @@ CLSS public abstract interface !annotation jakarta.ejb.Remove
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[METHOD])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault boolean retainIfException()
+meth public abstract !hasdefault boolean retainIfException() value= false
 
 CLSS public jakarta.ejb.RemoveException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr java.lang.Exception
 hfds serialVersionUID
 
@@ -358,19 +361,19 @@ CLSS public abstract interface !annotation jakarta.ejb.Schedule
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[METHOD])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault boolean persistent()
-meth public abstract !hasdefault java.lang.String dayOfMonth()
-meth public abstract !hasdefault java.lang.String dayOfWeek()
-meth public abstract !hasdefault java.lang.String hour()
-meth public abstract !hasdefault java.lang.String info()
-meth public abstract !hasdefault java.lang.String minute()
-meth public abstract !hasdefault java.lang.String month()
-meth public abstract !hasdefault java.lang.String second()
-meth public abstract !hasdefault java.lang.String timezone()
-meth public abstract !hasdefault java.lang.String year()
+meth public abstract !hasdefault boolean persistent() value= true
+meth public abstract !hasdefault java.lang.String dayOfMonth() value= "*"
+meth public abstract !hasdefault java.lang.String dayOfWeek() value= "*"
+meth public abstract !hasdefault java.lang.String hour() value= "0"
+meth public abstract !hasdefault java.lang.String info() value= ""
+meth public abstract !hasdefault java.lang.String minute() value= "0"
+meth public abstract !hasdefault java.lang.String month() value= "*"
+meth public abstract !hasdefault java.lang.String second() value= "0"
+meth public abstract !hasdefault java.lang.String timezone() value= ""
+meth public abstract !hasdefault java.lang.String year() value= "*"
 
 CLSS public jakarta.ejb.ScheduleExpression
-cons public init()
+cons public <init>()
 intf java.io.Serializable
 meth public jakarta.ejb.ScheduleExpression dayOfMonth(int)
 meth public jakarta.ejb.ScheduleExpression dayOfMonth(java.lang.String)
@@ -433,9 +436,9 @@ CLSS public abstract interface !annotation jakarta.ejb.Singleton
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.String description()
-meth public abstract !hasdefault java.lang.String mappedName()
-meth public abstract !hasdefault java.lang.String name()
+meth public abstract !hasdefault java.lang.String description() value= ""
+meth public abstract !hasdefault java.lang.String mappedName() value= ""
+meth public abstract !hasdefault java.lang.String name() value= ""
 
 CLSS public abstract interface !annotation jakarta.ejb.Startup
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
@@ -446,25 +449,25 @@ CLSS public abstract interface !annotation jakarta.ejb.Stateful
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault boolean passivationCapable()
-meth public abstract !hasdefault java.lang.String description()
-meth public abstract !hasdefault java.lang.String mappedName()
-meth public abstract !hasdefault java.lang.String name()
+meth public abstract !hasdefault boolean passivationCapable() value= true
+meth public abstract !hasdefault java.lang.String description() value= ""
+meth public abstract !hasdefault java.lang.String mappedName() value= ""
+meth public abstract !hasdefault java.lang.String name() value= ""
 
 CLSS public abstract interface !annotation jakarta.ejb.StatefulTimeout
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.util.concurrent.TimeUnit unit()
+meth public abstract !hasdefault java.util.concurrent.TimeUnit unit() value= MINUTES
 meth public abstract long value()
 
 CLSS public abstract interface !annotation jakarta.ejb.Stateless
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault java.lang.String description()
-meth public abstract !hasdefault java.lang.String mappedName()
-meth public abstract !hasdefault java.lang.String name()
+meth public abstract !hasdefault java.lang.String description() value= ""
+meth public abstract !hasdefault java.lang.String mappedName() value= ""
+meth public abstract !hasdefault java.lang.String name() value= ""
 
 CLSS public abstract interface jakarta.ejb.TimedObject
 meth public abstract void ejbTimeout(jakarta.ejb.Timer)
@@ -485,8 +488,8 @@ meth public abstract long getTimeRemaining()
 meth public abstract void cancel()
 
 CLSS public jakarta.ejb.TimerConfig
-cons public init()
-cons public init(java.io.Serializable,boolean)
+cons public <init>()
+cons public <init>(java.io.Serializable,boolean)
 meth public boolean isPersistent()
 meth public java.io.Serializable getInfo()
 meth public java.lang.String toString()
@@ -517,7 +520,7 @@ CLSS public abstract interface !annotation jakarta.ejb.TransactionAttribute
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[METHOD, TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault jakarta.ejb.TransactionAttributeType value()
+meth public abstract !hasdefault jakarta.ejb.TransactionAttributeType value() value= REQUIRED
 
 CLSS public final !enum jakarta.ejb.TransactionAttributeType
 fld public final static jakarta.ejb.TransactionAttributeType MANDATORY
@@ -534,7 +537,7 @@ CLSS public abstract interface !annotation jakarta.ejb.TransactionManagement
  anno 0 java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy value=RUNTIME)
  anno 0 java.lang.annotation.Target(java.lang.annotation.ElementType[] value=[TYPE])
 intf java.lang.annotation.Annotation
-meth public abstract !hasdefault jakarta.ejb.TransactionManagementType value()
+meth public abstract !hasdefault jakarta.ejb.TransactionManagementType value() value= CONTAINER
 
 CLSS public final !enum jakarta.ejb.TransactionManagementType
 fld public final static jakarta.ejb.TransactionManagementType BEAN
@@ -544,20 +547,20 @@ meth public static jakarta.ejb.TransactionManagementType[] values()
 supr java.lang.Enum<jakarta.ejb.TransactionManagementType>
 
 CLSS public jakarta.ejb.TransactionRequiredLocalException
-cons public init()
-cons public init(java.lang.String)
+cons public <init>()
+cons public <init>(java.lang.String)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public jakarta.ejb.TransactionRolledbackLocalException
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Exception)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Exception)
 supr jakarta.ejb.EJBException
 hfds serialVersionUID
 
 CLSS public abstract jakarta.ejb.embeddable.EJBContainer
-cons public init()
+cons public <init>()
 fld public final static java.lang.String APP_NAME = "jakarta.ejb.embeddable.appName"
 fld public final static java.lang.String MODULES = "jakarta.ejb.embeddable.modules"
 fld public final static java.lang.String PROVIDER = "jakarta.ejb.embeddable.provider"
@@ -587,7 +590,7 @@ CLSS public abstract interface java.lang.Comparable<%0 extends java.lang.Object>
 meth public abstract int compareTo({java.lang.Comparable%0})
 
 CLSS public abstract java.lang.Enum<%0 extends java.lang.Enum<{java.lang.Enum%0}>>
-cons protected init(java.lang.String,int)
+cons protected <init>(java.lang.String,int)
 intf java.io.Serializable
 intf java.lang.Comparable<{java.lang.Enum%0}>
 meth protected final java.lang.Object clone() throws java.lang.CloneNotSupportedException
@@ -604,16 +607,16 @@ supr java.lang.Object
 hfds name,ordinal
 
 CLSS public java.lang.Exception
-cons protected init(java.lang.String,java.lang.Throwable,boolean,boolean)
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Throwable)
-cons public init(java.lang.Throwable)
+cons protected <init>(java.lang.String,java.lang.Throwable,boolean,boolean)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Throwable)
+cons public <init>(java.lang.Throwable)
 supr java.lang.Throwable
 hfds serialVersionUID
 
 CLSS public java.lang.Object
-cons public init()
+cons public <init>()
 meth protected java.lang.Object clone() throws java.lang.CloneNotSupportedException
 meth protected void finalize() throws java.lang.Throwable
 meth public boolean equals(java.lang.Object)
@@ -627,20 +630,20 @@ meth public int hashCode()
 meth public java.lang.String toString()
 
 CLSS public java.lang.RuntimeException
-cons protected init(java.lang.String,java.lang.Throwable,boolean,boolean)
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Throwable)
-cons public init(java.lang.Throwable)
+cons protected <init>(java.lang.String,java.lang.Throwable,boolean,boolean)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Throwable)
+cons public <init>(java.lang.Throwable)
 supr java.lang.Exception
 hfds serialVersionUID
 
 CLSS public java.lang.Throwable
-cons protected init(java.lang.String,java.lang.Throwable,boolean,boolean)
-cons public init()
-cons public init(java.lang.String)
-cons public init(java.lang.String,java.lang.Throwable)
-cons public init(java.lang.Throwable)
+cons protected <init>(java.lang.String,java.lang.Throwable,boolean,boolean)
+cons public <init>()
+cons public <init>(java.lang.String)
+cons public <init>(java.lang.String,java.lang.Throwable)
+cons public <init>(java.lang.Throwable)
 intf java.io.Serializable
 meth public final java.lang.Throwable[] getSuppressed()
 meth public final void addSuppressed(java.lang.Throwable)
