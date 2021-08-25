@@ -24,7 +24,7 @@
     <parent>
         <groupId>jakartatck</groupId>
         <artifactId>project</artifactId>
-        <relativePath>../../../../../../pom.xml</relativePath>
+        <relativePath>../../../../../pom.xml</relativePath>
         <version>1.0</version>
     </parent>
 
