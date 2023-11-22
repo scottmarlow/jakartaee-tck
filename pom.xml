@@ -658,10 +658,28 @@
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <scope>test</scope>
+            <artifactId>junit-jupiter-api</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.jboss.arquillian.junit5</groupId>
+            <artifactId>arquillian-junit5-container</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.junit</groupId>
+            <artifactId>arquillian-junit-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.test</groupId>
+            <artifactId>arquillian-test-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.shrinkwrap</groupId>
+            <artifactId>shrinkwrap-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+        </dependency>
     </dependencies>
 
     <pluginRepositories>
@@ -852,6 +870,49 @@
                 <module>glassfish-runner</module>
             </modules>
         </profile>
+
+        <profile>
+            <id>rewrite-javatest</id>
+            <build>
+
+                <plugins>
+                    <plugin>
+                        <!--  Run with: mvn -Prewrite-javatest rewrite:run | tee build.log -->
+                        <groupId>org.openrewrite.maven</groupId>
+                        <artifactId>rewrite-maven-plugin</artifactId>
+                        <version>5.9.0-SNAPSHOT</version>
+                        <configuration>
+                            <activeRecipes>
+                                <recipe>tck.jakarta.platform.rewrite.JavaTestToArquillianShrinkwrap</recipe>
+                                <recipe>tck.jakarta.platform.rewrite.ConvertJavaTestNameRecipe</recipe>
+                            </activeRecipes>
+                            <failOnDryRunResults>false</failOnDryRunResults>
+                            <inclusions>
+                                <include>**/com/sun/ts/tests/ejb/ee/bb/session/stateless/argsemantics/*</include>
+                            </inclusions>
+                            <plainTextMasks>
+                                <plainTextMask>**/.txt</plainTextMask>
+                            </plainTextMasks>
+                        </configuration>
+                        <dependencies>
+                            <!-- The Jakarta TCK recipes -->
+                            <dependency>
+                                <groupId>tck.jakarta.platform</groupId>
+                                <artifactId>tck-rewrite-tools</artifactId>
+                                <version>1.0-SNAPSHOT</version>
+                            </dependency>
+                            <!-- openrewrite uses a com.fasterxml.jackson that uses the javax.xml.bind packages -->
+                            <dependency>
+                                <groupId>jakarta.xml.bind</groupId>
+                                <artifactId>jakarta.xml.bind-api</artifactId>
+                                <version>2.3.2</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
     </profiles>
 
 </project>
