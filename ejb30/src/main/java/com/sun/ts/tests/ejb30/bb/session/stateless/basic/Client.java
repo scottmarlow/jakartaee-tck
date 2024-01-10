@@ -32,6 +32,7 @@ import com.sun.ts.tests.ejb30.common.helper.ServiceLocator;
 import com.sun.ts.tests.ejb30.common.helper.TLogger;
 
 import jakarta.annotation.PostConstruct;
+import org.junit.jupiter.api.Test;
 
 public class Client extends EETest {
   private static int postConstructCallsCount;
@@ -85,6 +86,7 @@ public class Client extends EETest {
    * @test_Strategy: PostConstruct method must be invoked even when there is no
    * resource injection.
    */
+  @Test
   public void postConstructInvokedEvenNoResourceInjection() throws Exception {
     if (postConstructCallsCount > 0) {
       TLogger
@@ -104,6 +106,7 @@ public class Client extends EETest {
    * @test_Strategy: o using @Stateless annotation o use @Resource annotation o
    * use @Remote annotation
    */
+  @Test
   public void testRemoteAdd() throws Exception {
     RemoteCalculator bean = null;
     int op1 = 2;
@@ -134,6 +137,7 @@ public class Client extends EETest {
    * post-construct method must be called.
    * 
    */
+  @Test
   public void postConstructCalledEvenNoResourceInjectionInBean() throws Exception {
     RemoteCalculator bean2 = null;
     int op1 = 0;
@@ -166,6 +170,7 @@ public class Client extends EETest {
    * post-construct defined in its superclass must be called.
    * 
    */
+  @Test
   public void postConstructInSuperCalledEvenNoAnnotationInBean() throws Exception {
     RemoteCalculator bean3 = null;
     int op1 = -10;
@@ -198,6 +203,7 @@ public class Client extends EETest {
    * in superclass must be injected.
    * 
    */
+  @Test
   public void injectedIntoSuperCalledEvenNoAnnotationInBean() throws Exception {
     RemoteCalculator bean4 = null;
     int op1 = 1;
@@ -231,6 +237,7 @@ public class Client extends EETest {
    * processed. If @Resource or @PostConstruct not processed, the client will
    * receive EJBException.
    */
+  @Test
   public void noComponentDefiningAnnotations() throws Exception {
     RemoteCalculator bean5 = null;
     int op1 = 1;
@@ -253,6 +260,7 @@ public class Client extends EETest {
    * @test_Strategy: o business method may throw arbitary application
    * exceptions, which are propogated back to clients.
    */
+  @Test
   public void testRemoteThrowIt() throws Exception {
     RemoteCalculator bean = null;
     boolean passed = false;
