@@ -25,6 +25,7 @@ import java.util.Properties;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.tests.ejb30.common.helper.TLogger;
 import com.sun.ts.tests.ejb30.common.helper.TestFailedException;
+import org.junit.jupiter.api.Test;
 
 abstract public class ClientBase extends EETest {
   protected Properties props;
@@ -78,6 +79,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void stringTest() throws Exception {
     try {
       getEnvEntryFieldBean().stringTest();
@@ -94,6 +96,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void charTest() throws Exception {
     try {
       getEnvEntryFieldBean().charTest();
@@ -110,6 +113,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void intTest() throws Exception {
     try {
       getEnvEntryFieldBean().intTest();
@@ -126,6 +130,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void booleanTest() throws Exception {
     try {
       getEnvEntryFieldBean().booleanTest();
@@ -142,6 +147,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void doubleTest() throws Exception {
     try {
       getEnvEntryFieldBean().doubleTest();
@@ -158,6 +164,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void byteTest() throws Exception {
     try {
       getEnvEntryFieldBean().byteTest();
@@ -174,6 +181,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void shortTest() throws Exception {
     try {
       getEnvEntryFieldBean().shortTest();
@@ -190,6 +198,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void longTest() throws Exception {
     try {
       getEnvEntryFieldBean().longTest();
@@ -206,6 +215,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void floatTest() throws Exception {
     try {
       getEnvEntryFieldBean().floatTest();
@@ -222,6 +232,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void stringDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().stringDeepTest();
@@ -238,6 +249,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void charDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().charDeepTest();
@@ -254,6 +266,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void intDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().intDeepTest();
@@ -270,6 +283,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void booleanDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().booleanDeepTest();
@@ -286,6 +300,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void doubleDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().doubleDeepTest();
@@ -302,6 +317,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void byteDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().byteDeepTest();
@@ -318,6 +334,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void shortDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().shortDeepTest();
@@ -334,6 +351,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void longDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().longDeepTest();
@@ -350,6 +368,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    * 
    */
+  @Test
   public void floatDeepTest() throws Exception {
     try {
       getEnvEntryFieldBean().floatDeepTest();

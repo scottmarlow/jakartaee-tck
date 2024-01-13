@@ -26,6 +26,7 @@ import com.sun.ts.tests.ejb30.common.helper.TLogger;
 import com.sun.ts.tests.ejb30.common.helper.TestFailedException;
 
 import jakarta.ejb.EJB;
+import org.junit.jupiter.api.Test;
 
 abstract public class ClientBase extends EETest {
   @EJB(description = "It should map to <ejb-ref>/<description> xml element.")
@@ -57,6 +58,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void checkedAppExceptionTest() throws TestFailedException {
     try {
       bean.checkedAppException();
@@ -73,6 +75,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void checkedAppExceptionTest2() throws TestFailedException {
     try {
       rollbackBean.checkedAppException();
@@ -87,6 +90,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void checkedAppExceptionTestLocal() throws TestFailedException {
     try {
       rollbackBean.checkedAppExceptionLocal();
@@ -101,6 +105,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void uncheckedAppExceptionTest() throws TestFailedException {
     try {
       bean.uncheckedAppException();
@@ -117,6 +122,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void uncheckedAppExceptionTest2() throws TestFailedException {
     try {
       rollbackBean.uncheckedAppException();
@@ -131,6 +137,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void uncheckedAppExceptionTestLocal() throws TestFailedException {
     try {
       rollbackBean.uncheckedAppExceptionLocal();
@@ -145,6 +152,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void checkedRollbackAppExceptionTest() throws TestFailedException {
     try {
       rollbackBean.checkedRollbackAppException();
@@ -159,6 +167,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void checkedRollbackAppExceptionTestLocal()
       throws TestFailedException {
     try {
@@ -174,6 +183,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void uncheckedRollbackAppExceptionTest() throws TestFailedException {
     try {
       rollbackBean.uncheckedRollbackAppException();
@@ -188,6 +198,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void uncheckedRollbackAppExceptionTestLocal()
       throws TestFailedException {
     try {
@@ -208,6 +219,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atCheckedAppExceptionTest() throws TestFailedException {
     try {
       bean.atCheckedAppException();
@@ -224,6 +236,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atCheckedAppExceptionTest2() throws TestFailedException {
     try {
       rollbackBean.atCheckedAppException();
@@ -238,6 +251,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atCheckedAppExceptionTestLocal() throws TestFailedException {
     try {
       rollbackBean.atCheckedAppExceptionLocal();
@@ -252,6 +266,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atUncheckedAppExceptionTest() throws TestFailedException {
     try {
       bean.atUncheckedAppException();
@@ -268,6 +283,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atUncheckedAppExceptionTest2() throws TestFailedException {
     try {
       rollbackBean.atUncheckedAppException();
@@ -282,6 +298,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atUncheckedAppExceptionTestLocal() throws TestFailedException {
     try {
       rollbackBean.atUncheckedAppExceptionLocal();
@@ -296,6 +313,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atCheckedRollbackAppExceptionTest() throws TestFailedException {
     try {
       rollbackBean.atCheckedRollbackAppException();
@@ -310,6 +328,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atCheckedRollbackAppExceptionTestLocal()
       throws TestFailedException {
     try {
@@ -325,6 +344,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atUncheckedRollbackAppExceptionTest() throws TestFailedException {
     try {
       rollbackBean.atUncheckedRollbackAppException();
@@ -339,6 +359,7 @@ abstract public class ClientBase extends EETest {
    * @test_Strategy:
    *
    */
+  @Test
   public void atUncheckedRollbackAppExceptionTestLocal()
       throws TestFailedException {
     try {

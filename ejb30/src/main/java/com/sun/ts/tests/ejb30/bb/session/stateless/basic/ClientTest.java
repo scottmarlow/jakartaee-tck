@@ -39,7 +39,7 @@ public class ClientTest extends Client {
                 .addAsManifestResource(resourcePrefix+"/ejb3_bb_stateless_basic_ejb.xml", "ejb-jar.xml")
                 .addAsManifestResource(resourcePrefix+"/ejb3_bb_stateless_basic_ejb.jar.sun-ejb-jar.xml", "sun-ejb-jar.xml")
                 ;
-        JavaArchive ejb3_bb_stateless_basic_client = ShrinkWrap.create(JavaArchive.class, "ejb3_bb_stateless_basic_client.jar")
+        JavaArchive appclient = ShrinkWrap.create(JavaArchive.class, "appclient.jar")
                 .addClasses(com.sun.ts.lib.harness.EETest.Fault.class,
                         com.sun.ts.lib.harness.EETest.SetupException.class,
                         com.sun.ts.lib.harness.EETest.class,
@@ -53,20 +53,20 @@ public class ClientTest extends Client {
                 "MANIFEST.MF");
                 ;
 
-        EnterpriseArchive ejb3_bb_stateless_basic = ShrinkWrap.create(EnterpriseArchive.class, "ejb3_bb_stateless_basic.ear")
-                .addAsModule(ejb3_bb_stateless_basic_client)
+        EnterpriseArchive ear = ShrinkWrap.create(EnterpriseArchive.class, "appclient_ear.ear")
+                .addAsModule(appclient)
                 .addAsModule(ejb3_bb_stateless_basic_ejb)
                 ;
 
-        File archiveOnDisk = new File("target" + File.separator + ejb3_bb_stateless_basic.getName());
+        File archiveOnDisk = new File("target" + File.separator + "appclient_ear.ear");
         if (archiveOnDisk.exists()) {
             archiveOnDisk.delete();
         }
-        final ZipExporter exporter = ejb3_bb_stateless_basic.as(ZipExporter.class);
+        final ZipExporter exporter = ear.as(ZipExporter.class);
         exporter.exportTo(archiveOnDisk);
         String archivePath = archiveOnDisk.getAbsolutePath();
         System.out.printf("archivePath: %s\n", archivePath);
 
-        return ejb3_bb_stateless_basic;
+        return ear;
     }
 }
