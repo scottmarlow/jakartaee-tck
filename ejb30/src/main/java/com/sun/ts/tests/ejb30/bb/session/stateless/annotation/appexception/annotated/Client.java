@@ -20,9 +20,9 @@
 package com.sun.ts.tests.ejb30.bb.session.stateless.annotation.appexception.annotated;
 
 import com.sun.javatest.Status;
-import com.sun.ts.tests.ejb30.common.appexception.ClientBase;
+import com.sun.ts.tests.ejb30.common.appexception.ClientBaseAtOnlyTests;
 
-public class Client extends ClientBase {
+public class Client extends ClientBaseAtOnlyTests {
   public static void main(String[] args) {
     Client theTests = new Client();
     Status s = theTests.run(args, System.out, System.err);

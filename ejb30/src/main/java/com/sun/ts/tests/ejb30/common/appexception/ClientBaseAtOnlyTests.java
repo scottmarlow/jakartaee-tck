@@ -24,11 +24,10 @@ import java.util.Properties;
 import com.sun.ts.lib.harness.EETest;
 import com.sun.ts.tests.ejb30.common.helper.TLogger;
 import com.sun.ts.tests.ejb30.common.helper.TestFailedException;
-
 import jakarta.ejb.EJB;
 import org.junit.jupiter.api.Test;
 
-abstract public class ClientBase extends ClientBaseAtOnlyTests {
+abstract public class ClientBaseAtOnlyTests extends EETest {
   @EJB(description = "It should map to <ejb-ref>/<description> xml element.")
   private static AppExceptionIF bean;
 
@@ -50,167 +49,18 @@ abstract public class ClientBase extends ClientBaseAtOnlyTests {
   // Tests whose name does NOT begin with "at" are for /annotated/
   // directory. It means these exceptions are NOT annotated with
   // @ApplicationException; they are configured as application exceptions
+  // Marlow: Note that all of the (non) "at" tests were removed from this
+  // copy of the ClientBase tests.
   //////////////////////////////////////////////////////////////////////
 
-  /*
-   * testName: checkedAppExceptionTest
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void checkedAppExceptionTest() throws TestFailedException {
-    try {
-      bean.checkedAppException();
-      throw new TestFailedException(
-          "Did not get expected exception: CheckedAppException");
-    } catch (CheckedAppException e) {
-      TLogger.log("Got expected exception: " + e);
-    }
-  }
 
-  /*
-   * testName: checkedAppExceptionTest2
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void checkedAppExceptionTest2() throws TestFailedException {
-    try {
-      rollbackBean.checkedAppException();
-    } catch (CheckedAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: checkedAppExceptionTestLocal
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void checkedAppExceptionTestLocal() throws TestFailedException {
-    try {
-      rollbackBean.checkedAppExceptionLocal();
-    } catch (CheckedAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: uncheckedAppExceptionTest
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void uncheckedAppExceptionTest() throws TestFailedException {
-    try {
-      bean.uncheckedAppException();
-      throw new TestFailedException(
-          "Did not get expected exception: UncheckedAppException");
-    } catch (UncheckedAppException e) {
-      TLogger.log("Got expected exception: " + e);
-    }
-  }
-
-  /*
-   * testName: uncheckedAppExceptionTest2
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void uncheckedAppExceptionTest2() throws TestFailedException {
-    try {
-      rollbackBean.uncheckedAppException();
-    } catch (UncheckedAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: uncheckedAppExceptionTestLocal
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void uncheckedAppExceptionTestLocal() throws TestFailedException {
-    try {
-      rollbackBean.uncheckedAppExceptionLocal();
-    } catch (UncheckedAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: checkedRollbackAppExceptionTest
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void checkedRollbackAppExceptionTest() throws TestFailedException {
-    try {
-      rollbackBean.checkedRollbackAppException();
-    } catch (CheckedRollbackAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: checkedRollbackAppExceptionTestLocal
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void checkedRollbackAppExceptionTestLocal()
-      throws TestFailedException {
-    try {
-      rollbackBean.checkedRollbackAppExceptionLocal();
-    } catch (CheckedRollbackAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: uncheckedRollbackAppExceptionTest
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void uncheckedRollbackAppExceptionTest() throws TestFailedException {
-    try {
-      rollbackBean.uncheckedRollbackAppException();
-    } catch (UncheckedRollbackAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
-
-  /*
-   * testName: uncheckedRollbackAppExceptionTestLocal
-   * 
-   * @test_Strategy:
-   *
-   */
-  @Test
-  public void uncheckedRollbackAppExceptionTestLocal()
-      throws TestFailedException {
-    try {
-      rollbackBean.uncheckedRollbackAppExceptionLocal();
-    } catch (UncheckedRollbackAppException e) {
-      throw new TestFailedException("Unexpected exception:", e);
-    }
-  }
 
   //////////////////////////////////////////////////////////////////////
   // Tests whose name begin with "at" are for /override/ and /annotated/
   // directories. It means these exceptions are annotated with
+  // Marlow: Note that all of the "at" tests were kept in this class and
+  // the ClientBase class now extends this class for using the "at" tests
+  // where needed.
   ////////////////////////////////////////////////////////////////////// @ApplicationException
   //////////////////////////////////////////////////////////////////////
   /*
