@@ -52,7 +52,7 @@ public class ClientTest extends Client {
                         com.sun.ts.lib.harness.EETest.SetupException.class,
                         com.sun.ts.lib.harness.EETest.class,
                         com.sun.ts.tests.ejb30.bb.session.stateless.annotation.appexception.annotated.Client.class,
-                        com.sun.ts.tests.ejb30.common.appexception.ClientBase.class,
+                        com.sun.ts.tests.ejb30.common.appexception.ClientBaseAtOnlyTests.class,
                         com.sun.ts.tests.ejb30.common.appexception.AppExceptionIF.class,
                         com.sun.ts.tests.ejb30.common.appexception.CommonIF.class,
                         com.sun.ts.tests.ejb30.common.appexception.RollbackIF.class
