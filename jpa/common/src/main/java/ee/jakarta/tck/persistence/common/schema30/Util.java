@@ -1857,7 +1857,7 @@ public abstract class Util extends PMClientBase {
 		}
 	}
 
-	public void setup(String[] args, Properties p) throws Fault {
+	public void setup(String[] args, Properties p) throws Exception {
 		logTrace("PMClientBase.setup");
 		myProps = p;
 
