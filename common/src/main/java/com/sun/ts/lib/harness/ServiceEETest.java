@@ -99,6 +99,14 @@ public abstract class ServiceEETest extends EETest {
       TestUtil.logTrace("VehicleClient class check if is vehicle class =  " +
               (isVehicleClient? "yes, is a com.sun.ts.tests.common.vehicle.VehicleClient"
                       : "no, is not com.sun.ts.tests.common.vehicle.VehicleClient class"));
+      if (inTestHarness && !isVehicleClient) {
+        String sVehicle = TestUtil.getProperty(p, "vehicle");
+        if("stateless3".equals(sVehicle) || "stateful3".equals(sVehicle)
+        || "appmanaged".equals(sVehicle) || "appmanagedNoTx".equals(sVehicle)) {
+          isVehicleClient = true;
+          TestUtil.logTrace("Using appclient vehicle so set is vehicle client to true");
+        }
+      }
     } catch (ClassNotFoundException e) {
       TestUtil.logTrace("VehicleClient class not found, so not a vehicle client.");
     }
