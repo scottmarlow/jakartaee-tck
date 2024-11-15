@@ -2,20 +2,16 @@ package ee.jakarta.tck.persistence.core.EntityGraph;
 
 import com.sun.ts.lib.harness.Status;
 import java.util.Properties;
-import ee.jakarta.tck.persistence.core.EntityGraph.Client;
 import java.net.URL;
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.container.test.api.OperateOnDeployment;
 import org.jboss.arquillian.container.test.api.OverProtocol;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.StringAsset;
-import org.jboss.shrinkwrap.api.exporter.ZipExporter;
 import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -23,8 +19,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import tck.arquillian.porting.lib.spi.TestArchiveProcessor;
 import tck.arquillian.protocol.common.TargetVehicle;
-import com.sun.ts.lib.harness.Status;
-
 
 @ExtendWith(ArquillianExtension.class)
 @Tag("persistence")
@@ -36,9 +30,9 @@ public class ClientAppmanagednotxTest extends ee.jakarta.tck.persistence.core.En
     static final String VEHICLE_ARCHIVE = "jpa_core_EntityGraph_appmanagedNoTx_vehicle";
 
     public static void main(String[] args) {
-      ClientAppmanagednotxTest theTests = new ClientAppmanagednotxTest();
-      Status s = theTests.run(args, System.out, System.err);
-      s.exit();
+        ClientAppmanagednotxTest theTests = new ClientAppmanagednotxTest();
+        Status s = theTests.run(args, System.out, System.err);
+        s.exit();
     }
 
     public void setup(String[] args, Properties p) throws Fault {
@@ -98,19 +92,16 @@ public class ClientAppmanagednotxTest extends ee.jakarta.tck.persistence.core.En
             ee.jakarta.tck.persistence.core.EntityGraph.Client.class,
             ee.jakarta.tck.persistence.core.EntityGraph.Employee3.class,
             ee.jakarta.tck.persistence.core.EntityGraph.Department.class,
-            com.sun.ts.tests.common.vehicle.ejb3share.NoopTransactionWrapper.class,
-            ClientAppmanagednotxTest.class
+            com.sun.ts.tests.common.vehicle.ejb3share.NoopTransactionWrapper.class
             );
             // The application-client.xml descriptor
             URL resURL = Client.class.getResource("/com/sun/ts/tests/common/vehicle/appmanagedNoTx/appmanagedNoTx_vehicle_client.xml");
             if(resURL != null) {
-                System.out.println("xxx adding ./jpa/spec-tests/src/main/resources/com/sun/ts/tests/common/vehicle/appmanagedNoTx/appmanagedNoTx_vehicle_client.xml client container xml");
               jpa_core_EntityGraph_appmanagedNoTx_vehicle_client.addAsManifestResource(resURL, "application-client.xml");
             }
             // The sun-application-client.xml file need to be added or should this be in in the vendor Arquillian extension?
             resURL = Client.class.getResource("/com/sun/ts/tests/common/sunxml/sun-application-client.xml");
             if(resURL != null) {
-              System.out.println("xxx /com/sun/ts/tests/common/sunxml/sun-application-client.xml added as sun-application-client.xml" );
               jpa_core_EntityGraph_appmanagedNoTx_vehicle_client.addAsManifestResource(resURL, "sun-application-client.xml");
             }
             jpa_core_EntityGraph_appmanagedNoTx_vehicle_client.addAsManifestResource(new StringAsset("Main-Class: " + Client.class.getName() + "\n"), "MANIFEST.MF");
