@@ -1,19 +1,19 @@
 package ee.jakarta.tck.persistence.core.EntityGraph;
 
-import ee.jakarta.tck.persistence.core.EntityGraph.Client;
+import com.sun.ts.lib.harness.Status;
+
 import java.net.URL;
+import java.util.Properties;
+
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.container.test.api.OperateOnDeployment;
 import org.jboss.arquillian.container.test.api.OverProtocol;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.StringAsset;
-import org.jboss.shrinkwrap.api.exporter.ZipExporter;
 import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -21,8 +21,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.extension.ExtendWith;
 import tck.arquillian.porting.lib.spi.TestArchiveProcessor;
 import tck.arquillian.protocol.common.TargetVehicle;
-
-
 
 @ExtendWith(ArquillianExtension.class)
 @Tag("persistence")
@@ -33,6 +31,15 @@ import tck.arquillian.protocol.common.TargetVehicle;
 public class ClientAppmanagedTest extends ee.jakarta.tck.persistence.core.EntityGraph.Client {
     static final String VEHICLE_ARCHIVE = "jpa_core_EntityGraph_appmanaged_vehicle";
 
+    public static void main(String[] args) {
+        ClientAppmanagednotxTest theTests = new ClientAppmanagednotxTest();
+        Status s = theTests.run(args, System.out, System.err);
+        s.exit();
+    }
+
+    public void setup(String[] args, Properties p) throws Fault {
+        super.setup(args, p);
+    }
         /**
         EE10 Deployment Descriptors:
         jpa_core_EntityGraph: META-INF/persistence.xml
@@ -63,19 +70,17 @@ public class ClientAppmanagedTest extends ee.jakarta.tck.persistence.core.Entity
         public static EnterpriseArchive createDeploymentVehicle(@ArquillianResource TestArchiveProcessor archiveProcessor) {
         // Client
             // the jar with the correct archive name
-            JavaArchive jpa_core_EntityGraph_appmanaged_vehicle_client = ShrinkWrap.create(JavaArchive.class, "jpa_core_EntityGraph_appmanaged_vehicles_client.jar");
+            JavaArchive jpa_core_EntityGraph_appmanaged_vehicle_client = ShrinkWrap.create(JavaArchive.class, "jpa_core_EntityGraph_vehicles_client.jar");
             // The class files
             jpa_core_EntityGraph_appmanaged_vehicle_client.addClasses(
             com.sun.ts.tests.common.vehicle.VehicleRunnerFactory.class,
+            com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleIF.class,
             com.sun.ts.tests.common.vehicle.ejb3share.UseEntityManager.class,
             com.sun.ts.tests.common.vehicle.ejb3share.EJB3ShareIF.class,
             com.sun.ts.lib.harness.EETest.Fault.class,
-            com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleIF.class,
             com.sun.ts.tests.common.vehicle.ejb3share.UseEntityManagerFactory.class,
             com.sun.ts.tests.common.vehicle.EmptyVehicleRunner.class,
             ee.jakarta.tck.persistence.common.PMClientBase.class,
-            ee.jakarta.tck.persistence.core.EntityGraph.Client.class,
-            ee.jakarta.tck.persistence.core.EntityGraph.ClientAppmanagedTest.class,
             com.sun.ts.tests.common.vehicle.VehicleRunnable.class,
             com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleRunner.class,
             com.sun.ts.tests.common.vehicle.ejb3share.UserTransactionWrapper.class,
@@ -84,11 +89,11 @@ public class ClientAppmanagedTest extends ee.jakarta.tck.persistence.core.Entity
             com.sun.ts.tests.common.vehicle.ejb3share.EntityTransactionWrapper.class,
             com.sun.ts.lib.harness.EETest.SetupException.class,
             com.sun.ts.tests.common.vehicle.VehicleClient.class,
+            ee.jakarta.tck.persistence.core.EntityGraph.Client.class,
             ee.jakarta.tck.persistence.core.EntityGraph.Employee3.class,
             ee.jakarta.tck.persistence.core.EntityGraph.Department.class,
             com.sun.ts.tests.common.vehicle.ejb3share.NoopTransactionWrapper.class,
-            Client.class,
-            ClientAppmanagedTest.class
+            Client.class
             );
             // The application-client.xml descriptor
             URL resURL = Client.class.getResource("/com/sun/ts/tests/common/vehicle/appmanaged/appmanaged_vehicle_client.xml");
@@ -111,22 +116,24 @@ public class ClientAppmanagedTest extends ee.jakarta.tck.persistence.core.Entity
             jpa_core_EntityGraph_appmanaged_vehicle_ejb.addClasses(
                 com.sun.ts.tests.common.vehicle.ejb3share.EJB3ShareBaseBean.class,
                 com.sun.ts.tests.common.vehicle.VehicleRunnerFactory.class,
+                com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleIF.class,
                 com.sun.ts.tests.common.vehicle.ejb3share.UseEntityManager.class,
                 com.sun.ts.tests.common.vehicle.ejb3share.EJB3ShareIF.class,
                 com.sun.ts.lib.harness.EETest.Fault.class,
-                com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleIF.class,
                 com.sun.ts.tests.common.vehicle.ejb3share.UseEntityManagerFactory.class,
                 ee.jakarta.tck.persistence.common.PMClientBase.class,
                 ee.jakarta.tck.persistence.core.EntityGraph.Client.class,
+                ee.jakarta.tck.persistence.core.EntityGraph.Employee3.class,
+                ee.jakarta.tck.persistence.core.EntityGraph.Department.class,
                 com.sun.ts.tests.common.vehicle.VehicleRunnable.class,
-                com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleBean.class,
                 com.sun.ts.tests.common.vehicle.ejb3share.UserTransactionWrapper.class,
                 com.sun.ts.lib.harness.EETest.class,
                 com.sun.ts.lib.harness.ServiceEETest.class,
                 com.sun.ts.tests.common.vehicle.ejb3share.EntityTransactionWrapper.class,
                 com.sun.ts.lib.harness.EETest.SetupException.class,
                 com.sun.ts.tests.common.vehicle.VehicleClient.class,
-                com.sun.ts.tests.common.vehicle.ejb3share.NoopTransactionWrapper.class
+                com.sun.ts.tests.common.vehicle.ejb3share.NoopTransactionWrapper.class,
+                com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleBean.class
             );
             // The ejb-jar.xml descriptor
             URL ejbResURL1 = Client.class.getResource("/com/sun/ts/tests/common/vehicle/appmanaged/appmanaged_vehicle_client.xml");
@@ -178,7 +185,7 @@ public class ClientAppmanagedTest extends ee.jakarta.tck.persistence.core.Entity
             }
 
         // Ear
-            EnterpriseArchive jpa_core_EntityGraph_vehicles_ear = ShrinkWrap.create(EnterpriseArchive.class, "jpa_core_EntityGraph_appmanaged_vehicles.ear");
+            EnterpriseArchive jpa_core_EntityGraph_vehicles_ear = ShrinkWrap.create(EnterpriseArchive.class, "jpa_core_EntityGraph_vehicles.ear");
 
             // Any libraries added to the ear
 

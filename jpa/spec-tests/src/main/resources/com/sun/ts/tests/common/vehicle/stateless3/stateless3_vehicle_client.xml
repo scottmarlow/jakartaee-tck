@@ -23,6 +23,7 @@
     <ejb-ref-type>Session</ejb-ref-type>
     <remote>com.sun.ts.tests.common.vehicle.stateless3.Stateless3VehicleIF</remote>
     <ejb-link>Stateless3VehicleBean</ejb-link>
+    <lookup-name>java:global/jpa_core_EntityGraph_vehicles/jpa_core_EntityGraph_stateless3_vehicle_ejb/Stateless3VehicleBean</lookup-name>
   </ejb-ref>
 </application-client>
 

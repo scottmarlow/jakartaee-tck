@@ -35,9 +35,13 @@ public class ClientStateless3Test extends ee.jakarta.tck.persistence.core.Entity
     static final String VEHICLE_ARCHIVE = "jpa_core_EntityGraph_stateless3_vehicle";
 
     public static void main(String[] args) {
-      ClientStateless3Test theTests = new ClientStateless3Test();
-      Status s = theTests.run(args, System.out, System.err);
-      s.exit();
+        ClientStateless3Test theTests = new ClientStateless3Test();
+        Status s = theTests.run(args, System.out, System.err);
+        s.exit();
+    }
+
+    public void setup(String[] args, Properties p) throws Fault {
+        super.setup(args, p);
     }
 
         /**

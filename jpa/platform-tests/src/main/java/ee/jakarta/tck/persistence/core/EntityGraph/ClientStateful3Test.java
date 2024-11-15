@@ -32,21 +32,16 @@ import java.util.Properties;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class ClientStateful3Test extends ee.jakarta.tck.persistence.core.EntityGraph.Client {
-    static final String VEHICLE_ARCHIVE = "jpa_core_EntityGraph_stateful3_vehicle";
+    static final String VEHICLE_ARCHIVE = "jpa_core_EntityGraph_vehicle";
 
     public static void main(String[] args) {
-      ClientStateful3Test theTests = new ClientStateful3Test();
-      Status s = theTests.run(args, System.out, System.err);
-      s.exit();
+        ClientStateful3Test theTests = new ClientStateful3Test();
+        Status s = theTests.run(args, System.out, System.err);
+        s.exit();
     }
 
     public void setup(String[] args, Properties p) throws Fault {
-      try {
         super.setup(args, p);
-      } catch (Exception e) {
-        logErr("Exception: ", e);
-        throw new Fault("Setup failed:", e);
-      }
     }
 
         /**
