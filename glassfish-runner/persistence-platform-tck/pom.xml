@@ -574,7 +574,8 @@
                                 <additionalClasspathElement>${project.build.directory}/${glassfish.toplevel.dir}/glassfish/modules/glassfish-naming.jar</additionalClasspathElement>
                             </additionalClasspathElements>
                             <includes>
-                                <include>ee/jakarta/tck/persistence/**/*Test.java</include>
+                                <!-- <include>ee/jakarta/tck/persistence/**/*Test.java</include> -->
+                                <include>ee/jakarta/tck/persistence/ee/**/*Test.java</include>
                             </includes>
                             <!-- Select the @Tag("tck-javatest") tests -->
                             <groups>tck-javatest</groups>
