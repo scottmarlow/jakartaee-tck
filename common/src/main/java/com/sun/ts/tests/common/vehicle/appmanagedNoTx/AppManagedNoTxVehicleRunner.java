@@ -33,7 +33,8 @@ public class AppManagedNoTxVehicleRunner implements VehicleRunnable {
   static AppManagedNoTxVehicleIF bean;
   static {
     if (bean == null) {
-      throw new IllegalStateException("AppManagedNoTxVehicleRunner could not inject the @EJB AppManagedNoTxVehicleBean");
+      TestUtil.logErr("AppManagedNoTxVehicleRunner could not access the @EJB AppManagedNoTxVehicleBean",
+              new IllegalStateException("AppManagedNoTxVehicleRunner could not access the @EJB AppManagedNoTxVehicleBean"));
     }
   }
 

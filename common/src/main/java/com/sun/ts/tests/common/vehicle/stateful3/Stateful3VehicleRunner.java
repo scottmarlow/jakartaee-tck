@@ -33,7 +33,8 @@ public class Stateful3VehicleRunner implements VehicleRunnable {
   static Stateful3VehicleIF bean = null;
   static {
   if (bean == null) {
-    throw new IllegalStateException("Stateful3VehicleRunner could not inject the @EJB Stateful3VehicleBean");
+    TestUtil.logErr("Stateful3VehicleRunner could not access the @EJB Stateful3VehicleBean",
+            new IllegalStateException("Stateful3VehicleRunner could not access the @EJB Stateful3VehicleBean"));
     }
   }
 

@@ -34,7 +34,8 @@ public class AppManagedVehicleRunner implements VehicleRunnable {
   static AppManagedVehicleIF bean;
   static {
     if (bean == null) {
-      throw new IllegalStateException("AppManagedVehicleRunner could not inject the @EJB AppManagedVehicleBean");
+      TestUtil.logErr("AppManagedVehicleRunner could not access the @EJB AppManagedVehicleBean",
+              new IllegalAccessException("AppManagedVehicleRunner could not access the @EJB AppManagedVehicleBean"));
     }
   }
   public Status run(String[] args, Properties props) {
