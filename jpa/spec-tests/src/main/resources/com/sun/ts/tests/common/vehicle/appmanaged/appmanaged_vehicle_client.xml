@@ -23,7 +23,6 @@
     <ejb-ref-type>Session</ejb-ref-type>
     <remote>com.sun.ts.tests.common.vehicle.appmanaged.AppManagedVehicleIF</remote>
     <ejb-link>AppManagedVehicleBean</ejb-link>
-    <lookup-name>java:global/jpa_core_EntityGraph_vehicles/jpa_core_EntityGraph_appmanaged_vehicle_ejb/AppManagedVehicleBean</lookup-name>
   </ejb-ref>
 </application-client>
 

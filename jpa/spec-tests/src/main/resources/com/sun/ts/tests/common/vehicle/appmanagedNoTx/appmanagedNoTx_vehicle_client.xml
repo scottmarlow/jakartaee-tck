@@ -23,7 +23,6 @@
     <ejb-ref-type>Session</ejb-ref-type>
     <remote>com.sun.ts.tests.common.vehicle.appmanagedNoTx.AppManagedNoTxVehicleIF</remote>
     <ejb-link>AppManagedNoTxVehicleBean</ejb-link>
-    <lookup-name>java:global/jpa_core_EntityGraph_vehicles/jpa_core_EntityGraph_appmanagedNoTx_vehicle_ejb/AppManagedNoTxVehicleBean</lookup-name>
   </ejb-ref>
 </application-client>
 
