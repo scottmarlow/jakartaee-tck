@@ -23,27 +23,24 @@ package com.sun.ts.tests.common.vehicle.appmanagedNoTx;
 import java.util.Properties;
 
 import com.sun.ts.lib.harness.Status;
-import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 import com.sun.ts.tests.common.vehicle.VehicleRunnable;
-
-import javax.naming.InitialContext;
+import jakarta.ejb.EJB;
 
 public class AppManagedNoTxVehicleRunner implements VehicleRunnable {
-  public static final String APPMANAGEDNOTX_REF_NAME = "java:comp/env/ejb/AppManagedNoTxVehicleBean";
+
+  @EJB(name = "AppManagedNoTxVehicleBean")
+  static AppManagedNoTxVehicleIF bean;
+  static {
+    if (bean == null) {
+      throw new IllegalStateException("AppManagedNoTxVehicleRunner could not inject the @EJB AppManagedNoTxVehicleBean");
+    }
+  }
 
   public Status run(String[] args, Properties props) {
     Status sTestStatus = null;
     try {
-        TSNamingContext jc = new TSNamingContext();
-      AppManagedNoTxVehicleIF bean = null;
-      try {
-        bean = (AppManagedNoTxVehicleIF) jc.lookup(APPMANAGEDNOTX_REF_NAME);
-      } catch (Exception e) {
-        e.printStackTrace();
-        TSNamingContext.dumpJndi("", new InitialContext());
-        throw e;
-      }
+
         TestUtil.logTrace(
             "application-managed resource-local runner looked up vehicle: "
                 + bean);

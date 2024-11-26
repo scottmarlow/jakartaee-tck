@@ -23,39 +23,31 @@ package com.sun.ts.tests.common.vehicle.appmanaged;
 import java.util.Properties;
 
 import com.sun.ts.lib.harness.Status;
-import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 import com.sun.ts.tests.common.vehicle.VehicleRunnable;
 
-import javax.naming.InitialContext;
-import javax.naming.NameClassPair;
-import javax.naming.NamingEnumeration;
-import javax.naming.NamingException;
+import jakarta.ejb.EJB;
 
 public class AppManagedVehicleRunner implements VehicleRunnable {
-  public static final String APPMANAGED_REF_NAME = "java:comp/env/ejb/AppManagedVehicleBean";
 
+  @EJB(name = "AppManagedVehicleBean")
+  static AppManagedVehicleIF bean;
+  static {
+    if (bean == null) {
+      throw new IllegalStateException("AppManagedVehicleRunner could not inject the @EJB AppManagedVehicleBean");
+    }
+  }
   public Status run(String[] args, Properties props) {
     Status sTestStatus = null;
     try {
-      AppManagedVehicleIF bean=null;
-      try {
-        TSNamingContext jc = new TSNamingContext();
-        bean = (AppManagedVehicleIF) jc.lookup(APPMANAGED_REF_NAME);
-        } catch (Exception e) {
-        e.printStackTrace();
-        TSNamingContext.dumpJndi("", new InitialContext());
-        throw e;
-      }
-        TestUtil.logTrace(
-            "application-managed JTA runner looked up vehicle: " + bean);
-        sTestStatus = (bean.runTest(args, props)).toStatus();
-      } catch (Exception e) {
-        TestUtil.logErr("Test failed.", e);
-        sTestStatus = Status
-            .failed("Test run in application-managed JTA vehicle failed.");
-      }
-      return sTestStatus;
+      TestUtil.logTrace(
+              "application-managed JTA runner injected vehicle: " + bean);
+      sTestStatus = (bean.runTest(args, props)).toStatus();
+    } catch (Exception e) {
+      TestUtil.logErr("Test failed.", e);
+      sTestStatus = Status
+              .failed("Test run in application-managed JTA vehicle failed.");
     }
-
+    return sTestStatus;
   }
+}

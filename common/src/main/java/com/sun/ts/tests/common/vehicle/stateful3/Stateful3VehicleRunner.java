@@ -23,19 +23,23 @@ package com.sun.ts.tests.common.vehicle.stateful3;
 import java.util.Properties;
 
 import com.sun.ts.lib.harness.Status;
-import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 import com.sun.ts.tests.common.vehicle.VehicleRunnable;
+import jakarta.ejb.EJB;
 
 public class Stateful3VehicleRunner implements VehicleRunnable {
-  public static final String STATEFUL3_REF_NAME = "java:comp/env/ejb/Stateful3VehicleBean";
+
+  @EJB(name = "Stateful3VehicleBean")
+  static Stateful3VehicleIF bean = null;
+  static {
+  if (bean == null) {
+    throw new IllegalStateException("Stateful3VehicleRunner could not inject the @EJB Stateful3VehicleBean");
+    }
+  }
 
   public Status run(String[] args, Properties props) {
     Status sTestStatus = null;
     try {
-      TSNamingContext jc = new TSNamingContext();
-      Stateful3VehicleIF bean = (Stateful3VehicleIF) jc
-          .lookup(STATEFUL3_REF_NAME);
       TestUtil.logTrace("stateful3 runner looked up vehicle: " + bean);
       sTestStatus = (bean.runTest(args, props)).toStatus();
     } catch (Exception e) {
