@@ -69,6 +69,7 @@
         <module>webartifacts/jsp</module>
         <module>webartifacts/jstl</module>
         <module>webartifacts/servlet</module>
+        <module>install/signaturefiles/generate</module>
     </modules>
 
     <properties>
