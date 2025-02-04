@@ -25,10 +25,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
 
-import javax.naming.Context;
-
 import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.container.test.api.OverProtocol;
 import org.jboss.arquillian.container.test.api.TargetsContainer;
 import org.jboss.arquillian.junit5.ArquillianExtension;
 import org.jboss.arquillian.test.api.ArquillianResource;
@@ -46,7 +43,6 @@ import com.sun.ts.lib.util.TSNamingContext;
 import com.sun.ts.lib.util.TestUtil;
 
 import tck.arquillian.porting.lib.spi.TestArchiveProcessor;
-import tck.arquillian.protocol.common.TargetVehicle;
 
 
 

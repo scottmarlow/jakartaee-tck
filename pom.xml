@@ -34,7 +34,7 @@
     <description>platform-tcks-parent</description>
 
     <modules>
-        <module>arquillian</module>
+        <!--module>arquillian</module-->
         <module>tcks/apis/cdi-ee-tck/tck</module>
         <module>tcks/apis/connector</module>
         <module>tcks/apis/enterprise-beans/ejb30</module>
@@ -75,7 +75,7 @@
         <!-- Arquillian -->
         <ant.version>1.10.15</ant.version>
         <arquillian.container.se.api.version>1.0.2.Final</arquillian.container.se.api.version>
-        <arquillian.jakarta.tck.version>${project.version}</arquillian.jakarta.tck.version>
+        <arquillian.jakarta.tck.version>11.0.0-M1</arquillian.jakarta.tck.version>
         <arquillian.version>1.9.1.Final</arquillian.version>
 
         <!-- CDI -->
@@ -517,6 +517,11 @@
                 <version>${arquillian.jakarta.tck.version}</version>
             </dependency>
             <dependency>
+                <groupId>jakarta.tck.arquillian</groupId>
+                <artifactId>arquillian-protocol-lib</artifactId>
+                <version>${arquillian.jakarta.tck.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>jakarta.transaction</groupId>
                 <artifactId>jakarta.transaction-api</artifactId>
                 <version>${jakarta.transaction-api.version}</version>
@@ -613,7 +618,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>3.0.1</version>
+                    <version>3.1.2-SNAPSHOT</version>
                     <configuration>
                         <mavenExecutorId>forked-path</mavenExecutorId>
                         <preparationGoals>clean install</preparationGoals>
@@ -826,5 +831,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>
