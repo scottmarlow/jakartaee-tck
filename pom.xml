@@ -155,7 +155,7 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>common</artifactId>
-                <version>${jakarta.tck.tools.version}</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
@@ -561,6 +561,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>common</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -712,53 +716,6 @@
                                     <version>3.6.3</version>
                                 </requireMavenVersion>
                             </rules>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.diffplug.spotless</groupId>
-                <artifactId>spotless-maven-plugin</artifactId>
-                <version>2.36.0</version>
-                <configuration>
-                    <pom>
-                        <includes>
-                            <include>pom.xml</include>
-                        </includes>
-                        <sortPom>
-                            <nrOfIndentSpace>4</nrOfIndentSpace>
-                            <!-- default see https://github.com/Ekryd/sortpom/wiki/PredefinedSortOrderProfiles -->
-                            <predefinedSortOrder>recommended_2008_06</predefinedSortOrder>
-                            <!-- Sort properties -->
-                            <sortProperties>true</sortProperties>
-                            <!-- Sort plugin executions -->
-                            <sortExecutions>true</sortExecutions>
-                        </sortPom>
-                    </pom>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>check-spotless-poms</id>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                        <phase>validate</phase>
-                        <configuration>
-                            <!-- Skip the check if the release profile is active -->
-                            <skip>${release}</skip>
-                            <pom combine.children="append">
-                                <sortPom combine.children="append">
-                                    <nrOfIndentSpace>4</nrOfIndentSpace>
-                                    <!-- default see https://github.com/Ekryd/sortpom/wiki/PredefinedSortOrderProfiles -->
-                                    <predefinedSortOrder>recommended_2008_06</predefinedSortOrder>
-                                    <!-- Sort properties -->
-                                    <sortProperties>true</sortProperties>
-                                    <!-- Sort modules -->
-                                    <sortModules>true</sortModules>
-                                    <!-- Sort plugin executions -->
-                                    <sortExecutions>true</sortExecutions>
-                                </sortPom>
-                            </pom>
                         </configuration>
                     </execution>
                 </executions>

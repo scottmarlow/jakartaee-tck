@@ -35,6 +35,7 @@
         <dependency>
             <groupId>jakarta.tck</groupId>
             <artifactId>common</artifactId>
+            <version>11.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
