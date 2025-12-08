@@ -85,9 +85,9 @@ public class AltWebVehicleRunner implements VehicleRunnable {
 
         if (sServletStatus.isPassed() && sJspStatus.isPassed()) {
             sTestStatus = Status.passed("Test passed in a servlet and in a jsp");
-        } else if (sServletStatus.isFailed() && sServletStatus.isFailed()) {
+        } else if (sServletStatus.isFailed() && sJspStatus.isFailed()) {
             sTestStatus = Status.failed("Test failed in a servlet and in a jsp");
-        } else if (sJspStatus.isFailed()) {
+        } else if (sServletStatus.isFailed()) {
             sTestStatus = Status.failed("Test passed in a jsp but failed in a servlet");
         } else {
             sTestStatus = Status.failed("Test passed in a servlet but failed in a jsp");
